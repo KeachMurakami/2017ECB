@@ -1,0 +1,70 @@
+---
+title: "EBC2016"
+author: "KeachMurakami"
+date: "June 24, 2016"
+bibliography: ~/Dropbox/R/List.bib
+csl: new-phytologist.csl
+output:
+  html_document:
+    toc: true
+    # toc_float: true
+    depth: 3
+    theme: sandstone
+    self_contained: TRUE
+    fig_caption: true
+    pandoc_args: [
+    "--latexmathml"
+    ]
+  # word_document:
+  #   toc: true
+  #   fig_caption: true
+  #   pandoc_args: [
+  #   "--latexmathml"
+  #   ]
+---
+
+
+```{r load, echo = F, message = F}
+devtools::source_url("https://raw.githubusercontent.com/KeachMurakami/Sources/master/Startup.R")
+opts_chunk$set(echo = FALSE, fig.width = 7.5, fig.height = 7.5, out.width = "100%",
+               message = FALSE, warning = FALSE, cache = F, eval = T)
+
+base_size_default <- 12
+
+theme_bw2 <-
+  function(base_size = 12, base_family = "", legend = "none"){
+    theme_bw() %+replace%
+      theme(legend.position = legend,
+            panel.grid.minor = element_blank(),
+            axis.ticks = element_line(colour = "grey50", size = rel(.75)),
+            panel.margin = unit(0, units = "points")
+      )
+    }
+
+options(warn = -1)
+options(warn = 1)
+```
+
+Authors: Keach Murakami^1+^, Ryo Matsuda^1^, and Kazuhiro Fujiwara^1^  
+
+Affiliations: ^1^Graduate School of Agricultural and Life Sciences, The University of Tokyo
+
+Address: ^1^Yayoi, Bunkyo, Tokyo, 113--8657, Japan
+
+e-mail: keach.murakami@gmail.com  
+
+
+------
+
+The photosynthetic rate is one of the most important and widely-used information for the plant sciences.
+ダメージだとか、成長速度だとかを反映する。
+
+なので、正しい値が知りたい。
+
+でも、バイアスがよく入る。
+弱光可でも
+
+
+------
+
+# References
