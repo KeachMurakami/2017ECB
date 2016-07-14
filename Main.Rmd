@@ -3,9 +3,9 @@ title: "Evaluating the leaf photosynthetic rates?"
 author: "KeachMurakami"
 date: "June 24, 2016"
 bibliography: ~/Dropbox/R/List.bib
-csl: new-phytologist.csl
+# csl: new-phytologist.csl
 output:
-  html_document:
+    html_document:
     toc: true
     # toc_float: true
     depth: 3
@@ -13,21 +13,21 @@ output:
     self_contained: TRUE
     fig_caption: true
     pandoc_args: [
-    "--latexmathml"
+      "--latexmathml"
     ]
-  # word_document:
-  #   toc: true
-  #   fig_caption: true
-  #   pandoc_args: [
-  #   "--latexmathml"
-  #   ]
+# word_document:
+#   toc: true
+#   fig_caption: true
+#   pandoc_args: [
+#   "--latexmathml"
+#   ]
 ---
 
 
 ```{r load, echo = F, message = F}
 devtools::source_url("https://raw.githubusercontent.com/KeachMurakami/Sources/master/Startup.R")
 opts_chunk$set(echo = FALSE, fig.width = 7.5, fig.height = 7.5, out.width = "100%",
-               message = FALSE, warning = FALSE, cache = F, eval = T)
+           message = FALSE, warning = FALSE, cache = F, eval = T)
 
 base_size_default <- 12
 
@@ -36,16 +36,53 @@ options(warn = 1)
 ```
 
 ```{r Spectra}
+
+# set integrate ranges
+PFD_integrate_min <- 350
+PFD_integrate_max <- 750
+
 HID_raw <-
   fread("~/Dropbox/R/spectrum/HID.csv", skip = 13)
 
 HIDs <-
   HID_raw %>%
   setnames(., c("wavelength", paste0("ID", 1:(dim(HID_raw)[2] - 1)))) %>%
-  select(1, HPS = 12, MH = 21)
+  select(1, HPS_ = 12, MH_ = 21)
+
+HPS_Ocean_raw <-
+  fread("~/Dropbox/materials/SPD_HPS.txt", skip = 50, nrow = 2000) %>%
+  rename(wavelength = V1, value = V2)
+
+HPS_Ocean_PFD <-
+  smooth.spline(HPS_Ocean_raw$wavelength, HPS_Ocean_raw$value) %>%
+    predict(., seq(PFD_integrate_min, PFD_integrate_max)) %>%
+    .$y %>%
+  sum
+
+HPS_Ocean <-
+  HPS_Ocean_raw %>%
+  mutate(value = value * 100 / HPS_Ocean_PFD, variable = "HPS")
+
+
+MH_Ocean_raw <-
+  fread("~/Dropbox/materials/SPD_MH.txt", skip = 50, nrow = 2000) %>%
+  rename(wavelength = V1, value = V2)
+
+MH_Ocean_PFD <-
+  smooth.spline(MH_Ocean_raw$wavelength, MH_Ocean_raw$value) %>%
+    predict(., seq(PFD_integrate_min, PFD_integrate_max)) %>%
+    .$y %>%
+  sum
+
+MH_Ocean <-
+  MH_Ocean_raw %>%
+  mutate(value = value * 100 / MH_Ocean_PFD, variable = "MH")
+
 
 # MH: M220FCELS-W/BUD; IWASAKI ELECTRIC CO., LTD.
 # HPS: NH220FLS; IWASAKI ELECTRIC CO., LTD.
+
+  
 
 Absorptances <-
   fread("~/Dropbox/materials/SpectrumCucumber.csv") %>%
@@ -62,14 +99,21 @@ Sun <-
 # Sun: JIS C8904-3
 
 # LEDs <-
-  
+
 
 SPDs <-
-  left_join(HIDs, Sun, by = "wavelength") %>%
-    SPDnorm(from = 350, to = 750, integratedPFD = 100) %>%
-    select(-Absorptance) %>%
-    SPD + theme_bw2() +
-    xlab("Wavelength [nm]") + ylab(u_SPFD("Spectral photon flux density"))
+  # left_join(HIDs, Sun, by = "wavelength") %>%
+  Sun %>%
+  SPDnorm(from = 350, to = 750, integratedPFD = 100) %>%
+  select(-Absorptance) %>%
+  gather(variable, value, -wavelength) %>%
+  bind_rows(., HPS_Ocean) %>%
+  bind_rows(., MH_Ocean) %>%
+  filter(between(wavelength, 350, 800)) %>%
+  ggplot(aes(x = wavelength, y = value, group = variable, col = variable)) +
+  theme_bw2(legend = "right") +
+  geom_line() +
+  xlab("Wavelength [nm]") + ylab(u_SPFD("Spectral photon flux density"))
 
 CapSPD <-
   "Fig. 2 Spectral photon flux density distribution of light . The distributions at a PFD of 100 µmol m<sup>--2</sup> s<sup>--1</sup> within 400--750 nm are shown."
@@ -83,16 +127,14 @@ X_range <- seq(0, 1, length.out = X_div)
 
 InteractionView <-
   data_frame(X = rep(X_range, times = 2),
-             ETR = c(dbeta(X_range, 2, 4) * 1.2, dbeta(X_range, 3, 2)),
-             Trtm = rep(c("W", "WFR"), each = X_div)) %>%
-    ggplot(aes(X, ETR, col = Trtm, group = Trtm)) +
-    theme_bw2() +
-    geom_line()
-  
-  geom_rect()
-  
-  annotate()
+           ETR = c(dbeta(X_range, 2, 4) * 1.2, dbeta(X_range, 3, 2)),
+           Trtm = rep(c("W", "WFR"), each = X_div)) %>%
+  ggplot(aes(X, ETR, col = Trtm, group = Trtm)) +
+  theme_bw2() +
+  geom_line()
 
+CapInteract <-
+  "Fig. 2 Spectral photon flux density distribution of light . The distributions at a PFD of 100 µmol m<sup>--2</sup> s<sup>--1</sup> within 400--750 nm are shown."
 ```
 
 Authors: Keach Murakami^1+^, Ryo Matsuda^1^, and Kazuhiro Fujiwara^1^  
@@ -115,13 +157,13 @@ PPFD
 ------
 
 # Introduction
-
+  
   The photosynthetic rate is one of the most important and commonly reported phenotype for the plant sciences.
   Considering the importance of the photosynthetic rate, the effects on the rates were measured, evaluated, and compared among the leaves cultivated under different conditions, typically control and treatment.
   Based on the measured rates, the impacts of the treatments are discussed.
   Thus, the reliable measurements must be made prior to the evaluation.
-
-  Several studies have reported that the SPD of the ML affected the *P*~n~ of leaves [e.g. @McCree1972AM; @Inada1976PCP; @Hogewoning_et_al2012PC].
+  
+  A number of studies have reported that the SPD of the ML affected the *P*~n~ of leaves [e.g. @McCree1972AM; @Inada1976PCP; @Hogewoning_et_al2012PC].
   To eliminate this direct effect, the photosynthetic parameters usually measured under identical SPD conditions in the agricultural and horticultural researches.
   The most prevailing light source might be blue and red LED light sources.
   
@@ -135,11 +177,11 @@ PPFD
   Subsequently we discuss the practical situations where the interaction should be cared and the recomended measuring methods in the practical measurements of the photosynthetic rates.
   It is known that the SPD of light affects the instantaneous photosynthetic rate through the other mechanisms, such as the stomatal response [@Shimazaki_et_al2007AnnRev], 光阻害のスペクトル and light penetrating depth within the leaf [@Terashima_et_al2009PCP].
   These subjects are not referred in this review, *** review articles on these topics are available [@].
-
-
-
+  
+  
+  
 # How the interactions are generated
-
+  
   Light energy absorbed by a leaf drives photosynthetic electron transport.
   In higher plants, the photosynthetic electron transport chain is anchored by photochemical reactions that occur at two types of photosystems, PSII and PSI.
   The electron transports are powered by photon energy transferred to the respective photosystems, thus enabling electron transfer against the redox potential (called the Z scheme).
@@ -167,47 +209,47 @@ PPFD
   **The photosynthetic rate of W-leaves was greater than that of WFR-leaves under BR LED light (i.e. PSII-light), while the rates were comparable between the leaves, or slightly greater in the WFR-leaves, under sunlight (i.e. PSI-light).**
   These studies indicated that comparisons of leaf photosynthetic rates between plants grown under different SPDs of light can be biased depending on the SPD of measuring light (ML).
   @Walters2005JXB pointed out.
-
-One further issue, which is of importance not only for studies on acclimation but also more generally in the analysis of photosynthesis, is that actinic lights used for gas exchange or Chl fluorescence analyses are almost always spectrally distinct from sunlight and from lights used in growth chambers. This is very likely to result in an im- balance in the excitation of PSI and PSII: In the case of red or blue LEDs, light is preferentially absorbed by PSII so that PSI excitation is limiting for photosynthesis; con- versely, halogen light sources are rich in longer wave- lengths preferentially absorbed by PSI, so that PSII excitation is limiting (Walters et al., 1999). As a result of this mismatch between growth and experimental light sources, experimental determinations of photosynthetic efficiency can be appreciably lower than is the case under growth conditions. Indeed, whether PSI or PSII excitation is limiting, measurements of Chl fluorescence in situ routinely show PSII to be markedly more oxidized than is the case under experimental lights of similar irradiance (Walters et al., 2004). Therefore, while gas exchange and Chl fluorescence analyses are invaluable in making com- parisons between plants so as to monitor changes which result from acclimation, differences in the spectral quality of growth and experimental lights (as is often unavoidable for technical reasons) mean that such measurements do not necessarily reflect the functioning of the photosynthetic apparatus under growth conditions. This places limits on the extent to which such studies are useful in understand- ing the consequences of acclimation for photosynthetic function.
-
-
+  
+  One further issue, which is of importance not only for studies on acclimation but also more generally in the analysis of photosynthesis, is that actinic lights used for gas exchange or Chl fluorescence analyses are almost always spectrally distinct from sunlight and from lights used in growth chambers. This is very likely to result in an im- balance in the excitation of PSI and PSII: In the case of red or blue LEDs, light is preferentially absorbed by PSII so that PSI excitation is limiting for photosynthesis; con- versely, halogen light sources are rich in longer wave- lengths preferentially absorbed by PSI, so that PSII excitation is limiting (Walters et al., 1999). As a result of this mismatch between growth and experimental light sources, experimental determinations of photosynthetic efficiency can be appreciably lower than is the case under growth conditions. Indeed, whether PSI or PSII excitation is limiting, measurements of Chl fluorescence in situ routinely show PSII to be markedly more oxidized than is the case under experimental lights of similar irradiance (Walters et al., 2004). Therefore, while gas exchange and Chl fluorescence analyses are invaluable in making com- parisons between plants so as to monitor changes which result from acclimation, differences in the spectral quality of growth and experimental lights (as is often unavoidable for technical reasons) mean that such measurements do not necessarily reflect the functioning of the photosynthetic apparatus under growth conditions. This places limits on the extent to which such studies are useful in understand- ing the consequences of acclimation for photosynthetic function.
+  
+  
 # Where and When the interactions should be cared.
-
+  
   実際に測定してみないことには、どの程度生じているかは不明である。
   The impacts of the interaction in these systems should be evaluated prior to the **decision**.
   
   
   Since only light in the far-red waveband directs the balance to be PSI-biased, we had better to take special care for the interactions when the leaves grown under FR-poor and FR-rich light were comapred.
   
-
+  
   For instance, assimilation light provided by the most of the artificial light sources contains little FR (Fig. XXX).
   Blue or red LEDs and most of fluorescent lamps, white LEDs, metal halide lamps, and high-pressure sodium lamps typical PSII-light.
   On contrary, as sunlight, いくつかのメタハラ, and offcourse FR LEDs contains much FR (Fig. ), thus lights serves as PSI-light.
   Therefore, comparing the photosynthetic rates of leaves using the blue and red LED light source might result in relative overestimation in the former group and *vice versa* in the latter group, as demonstrated in our previous report [@Murakami_et_al2016PhysiolPlant].
-
+  
   As for the plant cultivation under artificial light sources, 
   For this decade, a number of attempts have been made for plant growth with artificial lighting [e.g. ].
   The impacts of the SPD of light during growth on the plant **growth** have been intensively investigated [@].
   In these papers, the photosynthetic rates were measured with an identical actinic light source, and subsequently the rates were compared and used for the key factor for the discussion of the plant growth.
   When imitating natural environemt (i.e. sunlight), this might be strongly 
-
+  
   The evaluation of the vertical profile of the photosynthetic properties of the leaves among the plant stand may be biased in the same manner.
   While the leaves in the upper layers were acclimated to sunlight, those in the lower layers were acclimated to the leaf-penetrated light.
   Due to the higher transmittance in the far-red waveband of a leaf, the leaf-penetrated light contains much FR, namely PSI-light (Fig. 1).
   Subsequently, the upper and lower leaves can be considered to become PSII- and PSI-leaves.
   Comparing the photosynthetic rates of these leaves with the blue and red LED light source should cause the interaction and concomittant biases.
-
+  
   Note that these interaction should be occur in the evaluations of the chlorophyll fluorescence and the photoinhibition.
   The overexicitation of PSII should result in the lowered PSII photochemical yield, frequently measured as an .
   In addition that, the photoinhibition experiments might also be affected the interaction.
   Imbalance in the excitation balance between the photosystems is supposed to acceralate the photoinhibition [@].
   Therefore, evaluating PSI-leaves under PSII-biased actinic light should underestimate ΦPSII and overestimate the photoinhibition in connection to those in the PSII-leaves.
   
-
-
-
+  
+  
+  
 # How the photosynthetic responses should be measured?
-
+  
   If researchers aim to describe the photosynthetic characteristics or the SPD of light the leaves receive is not predetermined, then *P*~n~ should be measured under both PSII- and PSI-light and the interaction evaluated to detect any biases.
   Such biases can result in spurious estimates of photosynthetic parameters (e.g. initial slopes and compensation points of CO~2~ and PFD photosynthetic rate curves) calculated from the measured *P*~n~ values using model-fitting methods [e.g. @Sharkey_et_al2007PCE].
   Biases in quantum yields of photosynthetic oxygen evolution rates were reported in pioneering papers [@Chow_et_al1990PNAS; @Walters_Horton1995aPlanta].
@@ -222,7 +264,7 @@ One further issue, which is of importance not only for studies on acclimation bu
   If the SPD of light the leaves receive is predetermined, then measurements should be made under the same light conditions.
   For instance, commercial transplants are sometimes raised in a closed system with artificial lighting [e.g. @Kozai2007POP], and subsequently transferred to a greenhouse and cultivated under sunlight.
   Therefore, in comparisons of light sources with different SPDs for transplant production, *P*~n~ measurements should be made under sunlight to eliminate the need to consider the interaction.
-
+  
   The effect of the interaction on the photosytnehtic rate was not prominent compared to those of the other factors such as PPFD, temperature, and CO~2~ concentrations.
   Therefore, it is not 基本的には、同一の光源で測定することで十分である場合が多い。
   PFDの影響は明らかにスペクトルの影響よりも大きい。
@@ -236,7 +278,7 @@ One further issue, which is of importance not only for studies on acclimation bu
   
   Therefore, the *P*~n~ and photosynthetic characteristics of leaves must be discussed in connection with the SPD of ML.
   The SPD of ML must always be considered when evaluating leaf and whole-plant photosynthesis.
-
+  
   Apparently, measuring the photosynthetic rates with plural levels of SPDs costs  
   To omit the evaluation of the multi-levels of the SPDs in the descriptive evaluation of the leaf photosynthesis, the determinant parameters are required to be defined and to be quantified.
   これらを避けるためには、交絡因子の数値化が必要であろう。
@@ -244,8 +286,11 @@ One further issue, which is of importance not only for studies on acclimation bu
   交互作用の解析をして交互作用が有意な場合、主効果の検討には統計的には意味がない。
   
   
-```{r FigOutput, fig.cap = CapSPD}
+```{r FigSPD, fig.cap = CapSPD}
 SPDs
 ```
-
+  
+```{r FigInteract, fig.cap = CapInteract}
+InteractionView
+```
 # References
