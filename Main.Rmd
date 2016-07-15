@@ -167,40 +167,55 @@ PPFD
   To eliminate this direct effect, the photosynthetic parameters usually measured under identical SPD conditions in the agricultural and horticultural researches.
   The most prevailing light source might be blue and red LED light sources.
   
-  
   However, our recent paper demonstrated that the light source cannot evaluate the instantaneous leaf photosynthetic properties in some cases [@Murakami_et_al2016PhysiolPlant].
   @Murakami_et_al2016PhysiolPlant compared the photosynthetic rates of leaves grown under white LED light without and with supplemental far-red LED light (W- and WFR-leaves) using blue-red LED light source sunlight-like SPD of light.
   The photosynthetic rate of W-leaves was greater than that of WFR-leaves under BR LED light (i.e. PSII-light), while the rates were comparable between the leaves, or slightly greater in the WFR-leaves, under sunlight (i.e. PSI-light).
   In other words, the SPDs of light incident on the leaf during growth and the measurement interacts on the photosynthetic rates.
   If the plants were evaluated without considering the interactions, the selection and decision might be distorted.
-  In this short review, we introduce the papers reportign the interaction and the likely causes of it, the light energy distribution between the photosystic electron transport.
-  Subsequently we discuss the practical situations where the interaction should be cared and the recomended measuring methods in the practical measurements of the photosynthetic rates.
-  It is known that the SPD of light affects the instantaneous photosynthetic rate through the other mechanisms, such as the stomatal response [@Shimazaki_et_al2007AnnRev], 光阻害のスペクトル and light penetrating depth within the leaf [@Terashima_et_al2009PCP].
-  These subjects are not referred in this review, *** review articles on these topics are available [@].
-  
-  
+
+  In this short review, we introduce the papers reporting the interaction and its likely causes, the light energy distribution between the photosystic electron transport.
+  Subsequently we discuss the practical situations where the interaction should be cared and the recomended measuring methods in the measurements of the photosynthetic rates.
+  It is known that the SPD of light affects the instantaneous photosynthetic rate through the other mechanisms, such as the stomatal response [@Shimazaki_et_al2007AnnRev], photo**inhibition** [@Zavafer_et_al2015JPP] and light penetrating depth within the leaf [@Terashima_et_al2009PCP].
+  Thought these subjects are not referred in this article, the cited review articles on these topics are available.
+
   
 # How the interactions are generated
   
-  Light energy absorbed by a leaf drives photosynthetic electron transport.
+  Light energy absorbed by a leaf drives photosynthetic electron transport, and thereby the photosynthetic carbon **fixation**.
   In higher plants, the photosynthetic electron transport chain is anchored by photochemical reactions that occur at two types of photosystems, PSII and PSI.
   The electron transports are powered by photon energy transferred to the respective photosystems, thus enabling electron transfer against the redox potential (called the Z scheme).
-  Since the electron transport occurs in series, an imbalanced energy distribution between PSII and PSI should lower photosynthetic light use efficiency [e.g. @Hogewoning et al. 2012].
-  These photosystems represent different light absorption spectral distributions.
-  Within the chlorophyll (chl) absorption band (approximately 350--750 nm), longer wavelengths of light (> 680--690 nm) are estimated to be preferentially absorbed by PSI, and PSI is drastically overexcited [@Evans1986PhotoPhoto; @Evans1987FPB; @Wientjes_et_al2013BBA; @Laisk_et_al2014BBA].
-  Monochromatic light at shorter wavelengths (< 680--690 nm) is estimated to be preferentially absorbed by PSII (especially in the wavebands near 470 and 650 nm corresponding to the absorption peaks of chl *b*), or evenly absorbed by both PSs [@Evans1986PhotoPhoto; @Evans1987FPB; @Wientjes_et_al2013BBA; @Laisk_et_al2014BBA].
   Because photosynthetic electron transport reactions occur in series, the electron transport rate (ETR) is limited by the slowest step.
+  Therefore, when the excess energy is distributed to PSII, the energy distribution to PSI limits the ETR and light use efficiency (i.e. photochemical quantum yield) of PSII is lowered (Fig. 1A) and *vice versa* (Fig. 1B).
+  Note that the balanced distribution should not be 50-50 basis because the rate-limiting photosystem does not always perform the photochemical reaction at a quantum yield of a 100%.
+  Even in a dark adapted helthy leaf, the yield of PSII cannot exceed 0.84 (i.e. chl fluorescence parameter *F*~v~/*F*~m~).
+  Although there is no clear consensus, the maximum yield of PSI seems to be greater than that of PSII.
+  A little bit greater distribution to PSII should be required to make maximum use of the absorbed photons.
+  Gentyに触れるか？
+
+  **AEFに言及**
   
-  なので、偏った光を照射したときの電子伝達は、その律速側の光化学系の量が多い葉で高くなる。
-  
-  Thus, light with a given SPD can be categorized as either PSII or PSI-light according to whether the excitation energy is preferentially distributed to PSII or PSI, respectively.
-  In the short term, the distribution of excitation energy is adjusted by the dynamic allocation of the light-harvesting antenna complex of PSII (LHCII) to PSI [state transition; for a review, see @Goldschmidt-Clermont_Bassi2015CurOpin].
-  When state transitions are insufficient to counterbalance the uneven distribution of excitation energy, a long-term acclimation response occurs [@Dietzel_et_al2008FJ]. Under PSII-light, the relative amount of the reaction center complex of PSII (RCII) to that of PSI (RCI) (RCII/RCI ratio) in leaves decreases to balance the distribution of excitation energy between the two PSs.
-  Conversely, under PSI-light, the RCII/RCI ratio increases to achieve a balance [@Chow_et_al1990PCE; @Chow_et_al1990PNAS; @Smith_et_al1993PCE; @Walters_Horton1994Planta; @Walters_Horton1995bPlanta; @Pfannschmidt_et_al1999Nature; @Wagner_et_al2008Planta; @Hogewoning_et_al2012PC].
+  **The imbalance between the photosystems ** can be caused by the SPD of light.
+  These photosystems represent different light absorption spectral distributions due to the difference in the compositions of binding pigments, mainly chlorophyll (chl) *a* and *b*.
+  Within the chlorophyll (chl) absorption band (approximately 350--750 nm), longer wavelengths of light (> 680--690 nm) are estimated to be preferentially absorbed by PSI, and PSI is drastically overexcited [@Evans1986PhotoPhoto; @Evans1987FPB; @Wientjes_et_al2013BBA; @Laisk_et_al2014BBA].
+  Such an umbalanced distribution was caused by the facts that only chl *a* can absorb light within the longer waveband and that PSI contains a greater amount of chl *a* than PSII.
+  Monochromatic light at shorter wavelengths (< 680--690 nm) is estimated to be preferentially absorbed by PSII (especially in the wavebands near 470 and 650 nm corresponding to the absorption peaks of chl *b*---abundant in PSII), or evenly absorbed by both PSs [@Evans1986PhotoPhoto; @Evans1987FPB; @Wientjes_et_al2013BBA; @Laisk_et_al2014BBA].
+  These wavelength dependency of the distribution balance is a determinant of EED under a given SPD of light.
+  以降はPSIIとPSI-lightを使う。相対的なものだ。
   In this study, the terms ‘PSII-light’ and ‘PSI-light’ are used only in a relative context.
   That is, we state which should be more PSII-biased when referring to two (or more) SPDs.
+  Thus, light with a given SPD can be categorized as either PSII or PSI-light according to whether the excitation energy is preferentially distributed to PSII or PSI, respectively.
+  
+  Apparently, the distribution is affected by the stoichiometry of the membrane composition, vulneerable to the SPD of light during the leaf growth [@].
+  **In the short term, the distribution of excitation energy is adjusted by the dynamic allocation of the light-harvesting antenna complex of PSII (LHCII) to PSI [state transition; for a review, see @Goldschmidt-Clermont_Bassi2015CurOpin].**
+  **When state transitions are insufficient to counterbalance the uneven distribution of excitation energy, a long-term acclimation response occurs [@Dietzel_et_al2008FJ].**
+  Under PSII-light, the relative amount of the reaction center complex of PSII to that of PSI in leaves decreases.
+  Conversely, under PSI-light, the relative amount increases to achieve a balance [@Chow_et_al1990PCE; @Chow_et_al1990PNAS; @Smith_et_al1993PCE; @Walters_Horton1994Planta; @Walters_Horton1995bPlanta; @Pfannschmidt_et_al1999Nature; @Wagner_et_al2008Planta; @Hogewoning_et_al2012PC].
+  These reactions are believed to be induced so that balance the *excitation balance*.
+  簡単にいうと、leaves grown under PSII-light tend to distribute the photons to PSI and leaves grown under PSI-light tend to distribute the photons to PSII. 
+  
+  Expected interactions have been reported in several studies [@].
   In their study on *Pisum sativum*, @Chow_et_al1990PNAS reported that adjustments in PS stoichiometry allowed the plant to maintain a high quantum efficiency of photosynthesis.
-  In that study, pea plants were grown under **cool-white fluorescent lamps with yellow Plexglas and incandescent bulbs with red Plexglas** (PSII- and PSI-light, respectively) and the photosynthetic quantum yield of O~2~ evolution was measured under PSII- and PSI-light.
+  In that study, pea plants were grown under **cool-white fluorescent lamps with yellow Plexglas and incandescent bulbs with red Plexglas** (PSII- and PSI-light, respectively) and the photosynthetic quantum yield of O~2~ evolution---O~2~ evolution rate per absorbed photons by leaf---was measured under PSII- and PSI-light.
   When measured under PSII-light, the yield was higher in PSII-light-grown leaves; when measured under PSI-light, the yield was higher in PSI-light-grown leaves.
   A similar trend was observed in other studies on *Arabidopsis thaliana* [@Walters_Horton1995aPlanta] and *Cucumis sativus* [@Hogewoning_et_al2012PC; @Murakami_et_al2016PhysiolPlant] (Table. 1).
   **@Walters_Horton1995aPlanta used halogen lamp and filters **
@@ -211,31 +226,32 @@ PPFD
   @Walters2005JXB pointed out.
   
   One further issue, which is of importance not only for studies on acclimation but also more generally in the analysis of photosynthesis, is that actinic lights used for gas exchange or Chl fluorescence analyses are almost always spectrally distinct from sunlight and from lights used in growth chambers. This is very likely to result in an im- balance in the excitation of PSI and PSII: In the case of red or blue LEDs, light is preferentially absorbed by PSII so that PSI excitation is limiting for photosynthesis; con- versely, halogen light sources are rich in longer wave- lengths preferentially absorbed by PSI, so that PSII excitation is limiting (Walters et al., 1999). As a result of this mismatch between growth and experimental light sources, experimental determinations of photosynthetic efficiency can be appreciably lower than is the case under growth conditions. Indeed, whether PSI or PSII excitation is limiting, measurements of Chl fluorescence in situ routinely show PSII to be markedly more oxidized than is the case under experimental lights of similar irradiance (Walters et al., 2004). Therefore, while gas exchange and Chl fluorescence analyses are invaluable in making com- parisons between plants so as to monitor changes which result from acclimation, differences in the spectral quality of growth and experimental lights (as is often unavoidable for technical reasons) mean that such measurements do not necessarily reflect the functioning of the photosynthetic apparatus under growth conditions. This places limits on the extent to which such studies are useful in understand- ing the consequences of acclimation for photosynthetic function.
+
+弱光下  
+  Under a higher PFDs, the photosynthetic rate is determined by the ETR and the selective PCO and PCC 
+  Ambient condition 
   
+
   
 # Where and When the interactions should be cared.
   
-  実際に測定してみないことには、どの程度生じているかは不明である。
   The impacts of the interaction in these systems should be evaluated prior to the **decision**.
-  
-  
-  Since only light in the far-red waveband directs the balance to be PSI-biased, we had better to take special care for the interactions when the leaves grown under FR-poor and FR-rich light were comapred.
-  
-  
-  For instance, assimilation light provided by the most of the artificial light sources contains little FR (Fig. XXX).
-  Blue or red LEDs and most of fluorescent lamps, white LEDs, metal halide lamps, and high-pressure sodium lamps typical PSII-light.
-  On contrary, as sunlight, いくつかのメタハラ, and offcourse FR LEDs contains much FR (Fig. ), thus lights serves as PSI-light.
-  Therefore, comparing the photosynthetic rates of leaves using the blue and red LED light source might result in relative overestimation in the former group and *vice versa* in the latter group, as demonstrated in our previous report [@Murakami_et_al2016PhysiolPlant].
+  Since the PFD in the far-red waveband has strong impact on the **energy distribution**, we had better to take special care for the interactions when the leaves grown under FR-poor and FR-rich light were comapred.
   
   As for the plant cultivation under artificial light sources, 
   For this decade, a number of attempts have been made for plant growth with artificial lighting [e.g. ].
   The impacts of the SPD of light during growth on the plant **growth** have been intensively investigated [@].
   In these papers, the photosynthetic rates were measured with an identical actinic light source, and subsequently the rates were compared and used for the key factor for the discussion of the plant growth.
-  When imitating natural environemt (i.e. sunlight), this might be strongly 
+  For instance, assimilation light provided by the most of the artificial light sources contain little FR (Fig. 3).
+  Blue or red LEDs and most of fluorescent lamps, white LEDs, metal halide lamps, and high-pressure sodium lamps typical PSII-light.
+  On contrary, sunlight, いくつかのメタハラ, and offcourse FR LEDs contain much FR (Fig. 3), thus they serve as PSI-light.
+  Therefore, comparing the photosynthetic rates of leaves using the blue and red LED light source might result in relative overestimation in the former group and *vice versa* in the latter group, as demonstrated in our previous report [@Murakami_et_al2016PhysiolPlant].
+  
+  模したつもりで模すことができてないな。When imitating natural environemt (i.e. sunlight), this might be strongly 
   
   The evaluation of the vertical profile of the photosynthetic properties of the leaves among the plant stand may be biased in the same manner.
   While the leaves in the upper layers were acclimated to sunlight, those in the lower layers were acclimated to the leaf-penetrated light.
-  Due to the higher transmittance in the far-red waveband of a leaf, the leaf-penetrated light contains much FR, namely PSI-light (Fig. 1).
+  Due to the higher transmittance in the far-red waveband of a leaf, the leaf-penetrated light contains much FR, namely PSI-light (Fig. 3).
   Subsequently, the upper and lower leaves can be considered to become PSII- and PSI-leaves.
   Comparing the photosynthetic rates of these leaves with the blue and red LED light source should cause the interaction and concomittant biases.
   
@@ -244,33 +260,31 @@ PPFD
   In addition that, the photoinhibition experiments might also be affected the interaction.
   Imbalance in the excitation balance between the photosystems is supposed to acceralate the photoinhibition [@].
   Therefore, evaluating PSI-leaves under PSII-biased actinic light should underestimate ΦPSII and overestimate the photoinhibition in connection to those in the PSII-leaves.
-  
-  
-  
-  
+
+
+
 # How the photosynthetic responses should be measured?
   
-  If researchers aim to describe the photosynthetic characteristics or the SPD of light the leaves receive is not predetermined, then *P*~n~ should be measured under both PSII- and PSI-light and the interaction evaluated to detect any biases.
-  Such biases can result in spurious estimates of photosynthetic parameters (e.g. initial slopes and compensation points of CO~2~ and PFD photosynthetic rate curves) calculated from the measured *P*~n~ values using model-fitting methods [e.g. @Sharkey_et_al2007PCE].
-  Biases in quantum yields of photosynthetic oxygen evolution rates were reported in pioneering papers [@Chow_et_al1990PNAS; @Walters_Horton1995aPlanta].
-  When comparing values for such parameters among reports (i.e. in reviews and meta-analyses), particular care should be taken to consider the SPDs of ML.
   If the SPD of light the leaves receive is predetermined, then measurements should be made under the same light conditions.
   For instance, commercial transplants are sometimes raised in a closed system with artificial lighting [e.g. @Kozai2007POP], and subsequently transferred to a greenhouse and cultivated under sunlight.
   栽培環境が決まっている場合、その光で測定するのが望ましいでしょう。
   何でもかんでも赤青LED光でやるとPitfall.
   太陽光光源なんかが役に立つかもね。
   Therefore, in comparisons of light sources with different SPDs for transplant production, *P*~n~ measurements should be made under sunlight to eliminate the need to consider the interaction.
-  Ideally, the photosynthetic rates should be measured under the in situ conditions.
-  If the SPD of light the leaves receive is predetermined, then measurements should be made under the same light conditions.
-  For instance, commercial transplants are sometimes raised in a closed system with artificial lighting [e.g. @Kozai2007POP], and subsequently transferred to a greenhouse and cultivated under sunlight.
-  Therefore, in comparisons of light sources with different SPDs for transplant production, *P*~n~ measurements should be made under sunlight to eliminate the need to consider the interaction.
   
+  If researchers aim to describe the photosynthetic characteristics or the SPD of light the leaves receive is not predetermined, then *P*~n~ should be measured under both PSII- and PSI-light and the interaction evaluated to detect any biases.
+  Such biases can result in spurious estimates of photosynthetic parameters (e.g. initial slopes and compensation points of CO~2~ and PFD photosynthetic rate curves) calculated from the measured *P*~n~ values using model-fitting methods [e.g. @Sharkey_et_al2007PCE]. 
+  When comparing values for such parameters among reports (i.e. in reviews and meta-analyses), particular care should be taken to consider the SPDs of ML.
+
+
+  Ideally, the photosynthetic rates should be measured under the in situ conditions.
   The effect of the interaction on the photosytnehtic rate was not prominent compared to those of the other factors such as PPFD, temperature, and CO~2~ concentrations.
   Therefore, it is not 基本的には、同一の光源で測定することで十分である場合が多い。
   PFDの影響は明らかにスペクトルの影響よりも大きい。
   PFDが変動しやすい環境下で測定を行う場合には、光質応答を木にして太陽光下で測定を行うよりは、それを無視してでも人工光で再現性を担保するほうがいいだろう。
   しかし、栽培光環境が葉の光合成特性に及ぼす影響を評価するような研究であれば、議論は慎重に行うべきである。
   とくに、栽培時のFR強度が変わる場合には、交互作用の影響が大きく表れやすいと予想される。
+  一般性を持たないので、この測定光のもとでは、という但し書きが必要となる。
   The effect of the incteraction should be amplified in the comparison be the leaves with different photosystems stoichiometries.
   Thus, the interaction should be taken special care when the 
   When the photosynthetic rates of the leaves grown differently were compared, the responses of the rates to both PSII- and PSI-light had better to be measured, compared, and reported in the paper.
