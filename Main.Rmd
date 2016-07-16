@@ -235,25 +235,26 @@ PPFD
   
 # Where and When the interactions should be cared.
   
-  The impacts of the interaction in these systems should be evaluated prior to the **decision**.
   Since the PFD in the far-red waveband has strong impact on the **energy distribution**, we had better to take special care for the interactions when the leaves grown under FR-poor and FR-rich light were comapred.
+  The impacts of the interaction on the photosynthetic rates should be concerned when the rates of leaves grown under different PFDs of FR.
   
-  As for the plant cultivation under artificial light sources, 
   For this decade, a number of attempts have been made for plant growth with artificial lighting [e.g. ].
-  The impacts of the SPD of light during growth on the plant **growth** have been intensively investigated [@].
-  In these papers, the photosynthetic rates were measured with an identical actinic light source, and subsequently the rates were compared and used for the key factor for the discussion of the plant growth.
-  For instance, assimilation light provided by the most of the artificial light sources contain little FR (Fig. 3).
+  The impacts of the SPD of light during growth on the plant traits, **such as the growth rate and resultant biomass**, have been intensively investigated [@]. (Li Kubota, Shibuya, Jishi? Matsuda, Inada？なんかあるっけ)
+  In these papers, the photosynthetic rates were measured with an identical actinic light source, and subsequently the rates were compared and discussed as a key factor of the plant growth.
+  Assimilation light provided by the most of the artificial light sources contain little FR (Fig. 3).
   Blue or red LEDs and most of fluorescent lamps, white LEDs, metal halide lamps, and high-pressure sodium lamps typical PSII-light.
-  On contrary, sunlight, いくつかのメタハラ, and offcourse FR LEDs contain much FR (Fig. 3), thus they serve as PSI-light.
+  On contrary, いくつかのメタハラ and sunlight contain much FR (Fig. 3), thus they serve as PSI-light.
+  FR supplemented light also serve as PSI-light.
   Therefore, comparing the photosynthetic rates of leaves using the blue and red LED light source might result in relative overestimation in the former group and *vice versa* in the latter group, as demonstrated in our previous report [@Murakami_et_al2016PhysiolPlant].
-  
-  模したつもりで模すことができてないな。When imitating natural environemt (i.e. sunlight), this might be strongly 
   
   The evaluation of the vertical profile of the photosynthetic properties of the leaves among the plant stand may be biased in the same manner.
   While the leaves in the upper layers were acclimated to sunlight, those in the lower layers were acclimated to the leaf-penetrated light.
   Due to the higher transmittance in the far-red waveband of a leaf, the leaf-penetrated light contains much FR, namely PSI-light (Fig. 3).
   Subsequently, the upper and lower leaves can be considered to become PSII- and PSI-leaves.
   Comparing the photosynthetic rates of these leaves with the blue and red LED light source should cause the interaction and concomittant biases.
+
+  The results from a chamber experiments, where PSII-light is usually used for the growth light, might not be comparable to the responses under sunlight.
+  We should conduct an experiment under sunlight, not a chamber experiments, when the response under sunlight is the interest of the experiment.
   
   Note that these interaction should be occur in the evaluations of the chlorophyll fluorescence and the photoinhibition.
   The overexicitation of PSII should result in the lowered PSII photochemical yield, frequently measured as an .
@@ -265,25 +266,21 @@ PPFD
 
 # How the photosynthetic responses should be measured?
   
-  If the SPD of light the leaves receive is predetermined, then measurements should be made under the same light conditions.
+  Ideally, the photosynthetic rates should be measured under the *in situ* conditions.
+  When the plant growth in the subsequent condition are focused, the rates should be measured under the SPD of light the plant will recieve.
   For instance, commercial transplants are sometimes raised in a closed system with artificial lighting [e.g. @Kozai2007POP], and subsequently transferred to a greenhouse and cultivated under sunlight.
-  栽培環境が決まっている場合、その光で測定するのが望ましいでしょう。
-  何でもかんでも赤青LED光でやるとPitfall.
-  太陽光光源なんかが役に立つかもね。
-  Therefore, in comparisons of light sources with different SPDs for transplant production, *P*~n~ measurements should be made under sunlight to eliminate the need to consider the interaction.
+  Therefore, in comparisons of light sources with different SPDs for transplant production, *P*~n~ measurements should be made under sunlight.
+  When the difference in the plant growth in the experiments are analyzed, the rates should be measured under the SPD of light the plant recieved.
+  These simple solutions may eliminate the problems caused by the interaction.
   
+  Note that the effect of the interaction on the photosytnehtic rate was not prominent compared to those of the other factors such as PPFD and CO~2~ concentration.
+  Accurate control of the PFD must be set above the regulation of the interaction.
+  Fluctuations in the PFD should be removed by using artificial light sources to ensure the reproductivity and reliability of the research.
+
   If researchers aim to describe the photosynthetic characteristics or the SPD of light the leaves receive is not predetermined, then *P*~n~ should be measured under both PSII- and PSI-light and the interaction evaluated to detect any biases.
   Such biases can result in spurious estimates of photosynthetic parameters (e.g. initial slopes and compensation points of CO~2~ and PFD photosynthetic rate curves) calculated from the measured *P*~n~ values using model-fitting methods [e.g. @Sharkey_et_al2007PCE]. 
   When comparing values for such parameters among reports (i.e. in reviews and meta-analyses), particular care should be taken to consider the SPDs of ML.
-
-
-  Ideally, the photosynthetic rates should be measured under the in situ conditions.
-  The effect of the interaction on the photosytnehtic rate was not prominent compared to those of the other factors such as PPFD, temperature, and CO~2~ concentrations.
-  Therefore, it is not 基本的には、同一の光源で測定することで十分である場合が多い。
-  PFDの影響は明らかにスペクトルの影響よりも大きい。
-  PFDが変動しやすい環境下で測定を行う場合には、光質応答を木にして太陽光下で測定を行うよりは、それを無視してでも人工光で再現性を担保するほうがいいだろう。
   しかし、栽培光環境が葉の光合成特性に及ぼす影響を評価するような研究であれば、議論は慎重に行うべきである。
-  とくに、栽培時のFR強度が変わる場合には、交互作用の影響が大きく表れやすいと予想される。
   一般性を持たないので、この測定光のもとでは、という但し書きが必要となる。
   The effect of the incteraction should be amplified in the comparison be the leaves with different photosystems stoichiometries.
   Thus, the interaction should be taken special care when the 
@@ -292,14 +289,24 @@ PPFD
   
   Therefore, the *P*~n~ and photosynthetic characteristics of leaves must be discussed in connection with the SPD of ML.
   The SPD of ML must always be considered when evaluating leaf and whole-plant photosynthesis.
-  
+
   Apparently, measuring the photosynthetic rates with plural levels of SPDs costs  
+  また太陽光あるいは葉の透過光だったりと複雑な分光分布を再現するのは現実には難しい。
   To omit the evaluation of the multi-levels of the SPDs in the descriptive evaluation of the leaf photosynthesis, the determinant parameters are required to be defined and to be quantified.
   これらを避けるためには、交絡因子の数値化が必要であろう。
   
   交互作用の解析をして交互作用が有意な場合、主効果の検討には統計的には意味がない。
   
   
+
+```{r FigETR, fig.cap = CapSPD}
+ETRs
+```
+
+```{r Fig, fig.cap = CapSPD}
+FigStructure
+```
+
 ```{r FigSPD, fig.cap = CapSPD}
 SPDs
 ```
