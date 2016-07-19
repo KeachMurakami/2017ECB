@@ -174,14 +174,14 @@ SPD: spectral PFD distribution
 
 # Introduction
   
-  The net photosynthetic rate is one of the most important and commonly reported phenotype for the plant sciences.
-  Considering the importance of the photosynthetic rate, the effects on the rates were measured, evaluated, and compared among the leaves cultivated under different conditions, typically control and treatment.
+  The net photosynthetic rate (*P*~n~) is one of the most important and commonly reported phenotype in the plant sciences.
+  Considering the importance of the photosynthetic rate, the effects on the rates were measured, evaluated, and compared among the leaves cultivated under different conditions, typically the control and treatment.
   Based on the measured rates, the impacts of the treatments are discussed.
   Thus, the reliable measurements must be made prior to the evaluation.
   
   A number of studies have reported that the SPD of the ML affected the *P*~n~ of leaves [e.g. @McCree1972AM; @Inada1976PCP; @Hogewoning_et_al2012PC].
-  To eliminate this direct effect, the photosynthetic parameters usually measured under identical SPD conditions in the agricultural and horticultural researches.
-  The most prevailing light source might be blue and red LED light sources.
+  To eliminate this direct effect from the comparison, the photosynthetic rates are measured under identical SPD conditions in the agricultural and horticultural researches.
+  The most prevailing light source might be the commercial blue+red LED light source.
   
   However, our recent paper demonstrated that the light source cannot evaluate the instantaneous leaf photosynthetic properties in some cases [@Murakami_et_al2016PhysiolPlant].
   @Murakami_et_al2016PhysiolPlant compared the photosynthetic rates of leaves grown under white LED light without and with supplemental far-red LED light (W- and WFR-leaves) using blue-red LED light source sunlight-like SPD of light.
@@ -300,21 +300,22 @@ SPD: spectral PFD distribution
   For instance, commercial transplants are sometimes raised in a closed system with artificial lighting [e.g. @Kozai2007POP], and subsequently transferred to a greenhouse and cultivated under sunlight.
   Therefore, in comparisons of light sources with different SPDs for transplant production, *P*~n~ measurements should be made under sunlight.
   When the difference in the plant growth in the experiments are analyzed, the rates should be measured under the SPD of light the plant recieved.
+  For instance, when the difference in the resultant growth between the treatments are analyzed and the *P*~n~ is used for the explanatory factor, respective growth light must be used for ML.
   These simple solutions may eliminate the problems caused by the interaction.
   
-  Note that the effect of the interaction on the photosytnehtic rate was not prominent compared to those of the other factors such as PPFD and CO~2~ concentration.
+  Note that the effect of the interaction on the photosytnehtic rate is not prominent compared to those of the other factors such as PPFD and CO~2~ concentration.
   Accurate control of the PFD must be set above the regulation of the interaction.
   Fluctuations in the PFD should be removed by using artificial light sources to ensure the reproductivity and reliability of the research.
+  To solve the dilenma between the *in situ* evaluation and PFD stability, the artificial sunlight source might be helpful.
 
   If researchers aim to describe the photosynthetic characteristics or the SPD of light the leaves receive is not predetermined, then *P*~n~ should be measured under both PSII- and PSI-light and the interaction evaluated to detect any biases.
-  Such biases can result in spurious estimates of photosynthetic parameters (e.g. initial slopes and compensation points of CO~2~ and PFD photosynthetic rate curves) calculated from the measured *P*~n~ values using model-fitting methods [e.g. @Sharkey_et_al2007PCE].
-  When comparing values for such parameters among reports (i.e. in reviews and meta-analyses), particular care should be taken to consider the SPDs of ML.
-  しかし、栽培光環境が葉の光合成特性に及ぼす影響を評価するような研究であれば、議論は慎重に行うべきである。
-  一般性を持たないので、この測定光のもとでは、という但し書きが必要となる。
   The effect of the incteraction should be amplified in the comparison be the leaves with different photosystems stoichiometries.
-  Thus, the interaction should be taken special care when the 
-  When the photosynthetic rates of the leaves grown differently were compared, the responses of the rates to both PSII- and PSI-light had better to be measured, compared, and reported in the paper.
-  At least, the light source of ML must be described in the materials and methods section so that readers can follow its SPD.
+  Thus, the interaction should be taken special care when the cases described in the **former section**.
+  If the significant interaction is not detected in two-way ANOVA, the main effect of the treatment can be assessed.
+  If any the interaction, the results should not be generalized.
+  The responses of the rates to both PSII- and PSI-light had better to be measured, compared, and reported in the paper.
+  A multilevel measurement might be difficult or impossible for technical reasons.
+  In such case, the light source of ML must be declared in the materials and methods section so that readers can follow its SPD.
 
 
 
@@ -327,8 +328,6 @@ SPD: spectral PFD distribution
   To solve these problems, the determinant parameters in the SPD-dependence of the photosynthetic ETR should be defined.
   To omit the evaluation of the multi-levels of the SPDs in the descriptive evaluation of the leaf photosynthesis, 
   
-
-  交互作用の解析をして交互作用が有意な場合、主効果の検討には統計的には意味がない。
 
 ![FigETR](FigETR.png)
 
