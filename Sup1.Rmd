@@ -1,0 +1,21 @@
+# Supplemental Information S1
+
+Information of the light sources and measuring instruments.
+
+| Light                           | Model code        | Supplier                        | Measuring instrument              |
+|:---------                       |:-----------       |:---------                       |:---------------------             |
+| Fluorescent lamp (FL)           | FPL55EX-N         | IWASAKI ELECTRIC CO., LTD.      | HR2000 (Ocean Optics Inc.)        |
+| Metalhalide lmap (MH)           | M220FCELS-W/BUD   | IWASAKI ELECTRIC CO., LTD.      | HR2000 (Ocean Optics Inc.)        |
+| High-pressure sodium lamp (HPS) | NH220FLS          | IWASAKI ELECTRIC CO., LTD.      | HR2000 (Ocean Optics Inc.)        |
+| Blue LED (B)                    | HBL3-3S55-LE      | Tricon Co.                      | MS-720 (EKO Instruments Co. Ltd.) |
+| Red LED (R)                     | SRK3-3A80-LE      | Tricon Co.                      | MS-720 (EKO Instruments Co. Ltd.) |
+| Far-red LED (FR)                | L735-36AU         | Epitex Inc.                     | MS-720 (EKO Instruments Co. Ltd.) |
+| White LED (W)                   | NSPW310DS         | Nichia Chemical Industries Ltd. | MS-720 (EKO Instruments Co. Ltd.) |
+
+
+The SPD of sunlight was adapted from JIS C8904-3.
+The SPD of the shaded sunlight was calculated from the SPD of sunlight and the transmittance spectrum of a cucumber leaf (Murakami et al. 2016).
+
+```{r FigSPD, eval = evalFig, fig.cap = CapSPD}
+SPDs
+```
