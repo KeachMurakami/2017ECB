@@ -2,8 +2,134 @@
 
 Information of the light sources and measuring instruments.
 
-| Light                           | Model code        | Supplier                        | Measuring instrument              |
-|:---------                       |:-----------       |:---------                       |:---------------------             |
+```{r Spectra, eval = evalFig}
+
+# set integrate ranges
+PFD_integrate_min <- 350
+PFD_integrate_max <- 750
+
+IntegratePFD <- 100
+
+panel_names <- c("(A) HIDs and fluorescent lamp", "(B) LEDs", "(C) Sunlight")
+
+# HID_raw <-
+#   fread("~/Dropbox/R/spectrum/HID.csv", skip = 13)
+# 
+# HIDs <-
+#   HID_raw %>%
+#   setnames(., c("wavelength", paste0("ID", 1:(dim(HID_raw)[2] - 1)))) %>%
+#   select(1, HPS_ = 12, MH_ = 21)
+FL_Ocean_raw <-
+  fread("~/Dropbox/materials/SPD_FL.csv") %>%
+  transmute(wavelength = `Wavelength[nm]`, value = FL) %>%
+  na.omit
+
+FL_Ocean_PFD <-
+  smooth.spline(FL_Ocean_raw$wavelength, FL_Ocean_raw$value) %>%
+    predict(., seq(PFD_integrate_min, PFD_integrate_max)) %>%
+    .$y %>%
+  sum
+
+FL_Ocean <-
+  FL_Ocean_raw %>%
+  mutate(value = value * 100 / FL_Ocean_PFD, variable = "FL")
+
+
+
+HPS_Ocean_raw <-
+  fread("~/Dropbox/materials/SPD_HPS.txt", skip = 50, nrow = 2000) %>%
+  rename(wavelength = V1, value = V2)
+
+HPS_Ocean_PFD <-
+  smooth.spline(HPS_Ocean_raw$wavelength, HPS_Ocean_raw$value) %>%
+    predict(., seq(PFD_integrate_min, PFD_integrate_max)) %>%
+    .$y %>%
+  sum
+
+HPS_Ocean <-
+  HPS_Ocean_raw %>%
+  mutate(value = value * 100 / HPS_Ocean_PFD, variable = "HPS")
+
+
+MH_Ocean_raw <-
+  fread("~/Dropbox/materials/SPD_MH.txt", skip = 50, nrow = 2000) %>%
+  rename(wavelength = V1, value = V2)
+
+MH_Ocean_PFD <-
+  smooth.spline(MH_Ocean_raw$wavelength, MH_Ocean_raw$value) %>%
+    predict(., seq(PFD_integrate_min, PFD_integrate_max)) %>%
+    .$y %>%
+  sum
+
+MH_Ocean <-
+  MH_Ocean_raw %>%
+  mutate(value = value * 100 / MH_Ocean_PFD, variable = "MH")
+
+OceanSPDs <-
+  bind_rows(FL_Ocean, HPS_Ocean, MH_Ocean) %>%
+  mutate(panel = panel_names[1])
+
+
+  
+
+Absorptances <-
+  fread("~/Dropbox/materials/SpectrumCucumber.csv") %>%
+  filter(Trtm %in% c("W", "WFR", "FL")) %>%
+  mutate(wavelength = as.numeric(wavelength)) %>%
+  filter(variable == "absorption", Trtm == "W")
+
+Sun <-
+  fread("~/Dropbox/materials/Sunlight_JIS.csv") %>%
+  setnames(c("wavelength", "Sunlight")) %>%
+  left_join(., Absorptances, by = "wavelength") %>%
+  transmute(wavelength, Sun = Sunlight, Shade = Sunlight * (100 - ave), Absorptance = ave)
+
+# Sun: JIS C8904-3
+
+LEDs <-
+  fread("~/Dropbox/materials/SPD_FL.csv") %>%
+  transmute(wavelength = `Wavelength[nm]`, W, FR, B = B_HL, R = R_SR) %>%
+  SPDnorm(from = 350, to = 750, integratedPFD = IntegratePFD) %>%
+  gather(variable, value, -wavelength) %>%
+  mutate(panel = panel_names[2]) %>%
+  na.omit
+
+SPD_labels <-
+  data_frame(variable = c("FL", "MH", "HPS", "B", "R", "FR", "W", "Sun", "Shade"),
+             wavelength = c(435, 520, 570, 448, 660, 735, 460, 450, 750),
+             value = c(2.2, .6, 3, 4, 4.2, 3.8, 1.3, 0.6, 2),
+             label = c("FL", "MH", "HPS", "B", "R", "FR", "W", "Sun", "Leaf transmitted sunlight"),
+             panel = rep(panel_names,  c(3, 4, 2)))
+
+SPDs <-
+  Sun %>%
+  SPDnorm(from = 350, to = 750, integratedPFD = IntegratePFD) %>%
+  select(-Absorptance) %>%
+  gather(variable, value, -wavelength) %>%
+  mutate(panel = panel_names[3]) %>%
+  bind_rows(., OceanSPDs, LEDs) %>%
+  filter(between(wavelength, 380, 820)) %>%
+  ggplot(aes(x = wavelength, y = value, group = variable, col = variable, linetype = variable)) +
+  theme_bw2() +
+  geom_rect(aes(xmin = 700, xmax = 750, ymin = 0, ymax = +Inf), fill = "grey90", col = NA) +
+  geom_line() +
+  geom_text(data = SPD_labels, aes(x = wavelength, y = value, label = label)) +
+  scale_linetype_manual(values = c(1, 1, 3, 2, 4, 2, 2, 1, 4)) +
+  scale_color_manual(values = c("blue", "black", "darkred", "orange", "purple", "red", "grey50", "black", "black")) +
+  facet_grid(panel ~ .) +
+  gg_xy(c(380, 820, 0, 4.5)) +
+  xlab("Wavelength [nm]") + ylab(u_SPFD("Spectral photon flux density"))
+
+CapSPD <-
+  "Fig. S1  Spectral photon flux density distribution of light. The distributions at a PFD of 100 µmol m<sup>--2</sup> s<sup>--1</sup> within 400--750 nm are shown. The far-red waveband (700--750 nm) is filled in grey."
+```
+
+```{r FigSPD, eval = evalFig, fig.cap = CapSPD}
+SPDs
+```
+
+| Light (abbreviation)            | Model code        | Supplier                        | Measuring instrument              |
+|:--------------------------------|:------------------|:--------------------------------|:----------------------------------|
 | Fluorescent lamp (FL)           | FPL55EX-N         | IWASAKI ELECTRIC CO., LTD.      | HR2000 (Ocean Optics Inc.)        |
 | Metalhalide lmap (MH)           | M220FCELS-W/BUD   | IWASAKI ELECTRIC CO., LTD.      | HR2000 (Ocean Optics Inc.)        |
 | High-pressure sodium lamp (HPS) | NH220FLS          | IWASAKI ELECTRIC CO., LTD.      | HR2000 (Ocean Optics Inc.)        |
@@ -13,9 +139,8 @@ Information of the light sources and measuring instruments.
 | White LED (W)                   | NSPW310DS         | Nichia Chemical Industries Ltd. | MS-720 (EKO Instruments Co. Ltd.) |
 
 
-The SPD of sunlight was adapted from JIS C8904-3.
+The SPD of sunlight was adapted from JIS C 8904-3.
 The SPD of the shaded sunlight was calculated from the SPD of sunlight and the transmittance spectrum of a cucumber leaf (Murakami et al. 2016).
 
-```{r FigSPD, eval = evalFig, fig.cap = CapSPD}
-SPDs
-```
+#### Supplementary Reference
+JIS C 8904-3. 2011. [Photovoltaic devices-Part 3: Measurement principles for photovoltaic(PV) solar devices with reference spectral irradiance data](http://www.jisc.go.jp/app/pager?id=2769864).
