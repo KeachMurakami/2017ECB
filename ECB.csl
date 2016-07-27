@@ -27,7 +27,7 @@
     <category field="biology"/>
     <issn>1040-4651</issn>
     <eissn>1531-298X</eissn>
-    <updated>2016-07-25T12:22:00+00:00</updated>
+    <updated>2016-07-27T09:20:15+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -47,7 +47,7 @@
   </macro>
   <macro name="author">
     <names variable="author">
-      <name delimiter-precedes-et-al="always" delimiter-precedes-last="always" initialize-with="." name-as-sort-order="all"/>
+      <name initialize-with="." name-as-sort-order="all"/>
       <label form="short" prefix=" "/>
       <substitute>
         <names variable="editor"/>
@@ -101,14 +101,14 @@
       </group>
     </layout>
   </citation>
-  <bibliography hanging-indent="true" et-al-min="20" et-al-use-first="1">
+  <bibliography hanging-indent="true" et-al-min="13" et-al-use-first="1">
     <sort>
       <key macro="author"/>
       <key variable="title"/>
     </sort>
     <layout suffix=".">
-      <text macro="author" strip-periods="false" font-weight="normal"/>
-      <date variable="issued" prefix=" (" suffix=").">
+      <text macro="author" font-weight="normal"/>
+      <date variable="issued" prefix=" " suffix=".">
         <date-part name="year"/>
       </date>
       <choose>

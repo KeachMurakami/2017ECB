@@ -1,16 +1,15 @@
 ---
 title: "A practical guide for selecting the spectral photon flux density distribution of light during the measurements of the leaf photosynthetic rate"
 author: "Keach Murakami^1\\*^, Ryo Matsuda^1^, Kazuhiro Fujiwara^1^"
-bibliography: ~/Dropbox/R/List.bib
+bibliography: ~/GitHub/BeeLabR/BibTex/with.bib
 csl: ECB.csl
 output:
   html_document:
-    toc: true
-    # toc_float: true
+    toc: TRUE
     depth: 3
     theme: sandstone
     self_contained: TRUE
-    fig_caption: true
+    fig_caption: TRUE
     pandoc_args: [
     "--latexmathml"
     ]
