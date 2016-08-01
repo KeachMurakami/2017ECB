@@ -1,0 +1,53 @@
+---
+title: "A guide for selecting the spectral photon flux density distribution of light for comparing photosynthetic rates of leaves grown under different spectral light environments"
+author: "Keach Murakami^1\\*^, Ryo Matsuda^1^, Kazuhiro Fujiwara^1^"
+bibliography: ~/GitHub/BeeLabR/BibTex/with.bib
+csl: ECB.csl
+header-includes:
+  - \setmainfont{Helvetica}
+  - \usepackage{zxjatype} # 日本語を使う
+  - \setjamainfont{Hiragino Kaku Gothic Pro} # 日本語フォント
+  - \usepackage{lscape} # 図を回転する
+  - \newcommand{\blandscape}{\begin{landscape}} # 図回転用のbegin command
+  - \newcommand{\elandscape}{\end{landscape}} # 図回転用のend command
+  - \usepackage{setspace} # 行間の調節
+  - \newcommand{\bdoublespace}{\begin{spacing}{1.5}} # 行間を広げるbegin command
+  - \newcommand{\edoublespace}{\end{spacing}{1.5}} # 行間を広げるbegin command
+
+output:
+# pdf_document:
+#   latex_engine: xelatex
+#     toc: TRUE # table of contents
+#     toc_depth: 3
+#     number_sections: TRUE
+#     fig_caption: TRUE
+# fontsize: 12pt
+# geometry: margin=1.2in
+  html_document:
+    toc: TRUE
+    depth: 3
+    theme: sandstone
+    self_contained: TRUE
+    fig_caption: TRUE
+---
+
+```{r, echo = F, message = F}
+rm(list = ls())
+
+evalFig <- T
+if(evalFig){
+devtools::source_url("https://raw.githubusercontent.com/KeachMurakami/Sources/master/Startup_silent.R")
+} else {
+library(knitr)
+}
+
+opts_chunk$set(cache = F, echo = FALSE, fig.width = 5, fig.height = 5,
+               out.width = '500pixel', out.height = '500pixel', dpi = 100,
+               message = FALSE, warning = FALSE, eval = T)
+```
+
+
+```{r, child = "./Main.Rmd"}
+```
+
+# References
