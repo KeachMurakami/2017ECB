@@ -1,5 +1,5 @@
 ---
-title: "A guide for selecting the spectral photon flux density distribution of light for comparing photosynthetic rates of leaves grown under different spectral light environments"
+title: "Evaluating effects of light quality: A basis for selecting the spectral photon flux density distribution of light for measuring photosynthetic rates of leaves"
 author: "Keach Murakami^1\\*^, Ryo Matsuda^1^, Kazuhiro Fujiwara^1^"
 bibliography: ~/GitHub/BeeLabR/BibTex/with.bib
 csl: ECB.csl
@@ -36,15 +36,51 @@ rm(list = ls())
 
 evalFig <- T
 if(evalFig){
-devtools::source_url("https://raw.githubusercontent.com/KeachMurakami/Sources/master/Startup_silent.R")
+  devtools::source_url("https://raw.githubusercontent.com/KeachMurakami/Sources/master/Startup_silent.R")
 } else {
-library(knitr)
+  library(knitr)
 }
 
 opts_chunk$set(cache = F, echo = FALSE, fig.width = 5, fig.height = 5,
                out.width = '500pixel', out.height = '500pixel', dpi = 100,
                message = FALSE, warning = FALSE, eval = T)
 ```
+
+Affiliations: ^1^Graduate School of Agricultural and Life Sciences, The University of Tokyo
+
+Address: ^1^Yayoi, Bunkyo, Tokyo, 113--8657, Japan
+
+e-mail: keach.murakami@gmail.com  
+
+------
+
+**Abstract**
+
+  The spectral photon flux density distribution (SPD) of light during growth and for measurements do not only directly affect the net photosynthetic rate (*P*~n~) but also interacts on it.
+  A plausible mechanisms of the interaction, some situations in which the interaction should be concerned, and the selection of appropriate measuring light for evaluation of photosynthesis are summarized.
+  *P*~n~ should be measured under *in situ* conditions depending on the purpose of the study.
+  In prospective studies focusing on plant growth after the measurements, the measurements should be made under the SPD of light that the plant will be subject to.
+  In retrospective studies aiming to elucidate causes of differences between the experimental groups, the measurements should be made under the SPDs of light that the plants have received during the treatments.
+  In descriptive studies, *P*~n~ should be evaluated under several SPDs of measuring light to comprehend general photosynthetic characteristics of the leaves.
+  *P*~n~ under a single-pattern SPD of measuring light is only an aspect of the photosynthetic characteristics of the leaf.
+  The obtained result must be discussed in connection with the SPD of measuring light so as not to make biased evaluation caused by the interaction.
+
+------
+
+**Abbreviations**
+BR-light: blue and red LED light,
+Chl: chlorophyll,
+ETR: electron transport rate,
+FR: far-red,
+LED: light-emitting diode,
+*P*~n~: net photosynthetic rate,
+PFD: photon flux density,
+PPFD: photosynthetic photon flux density,
+PSI: photosystem I,
+PSII: photosystem II,
+SPD: relative spectral PFD distribution
+
+------
 
 
 ```{r, child = "./Main.Rmd"}

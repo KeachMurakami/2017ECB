@@ -27,7 +27,7 @@
     <category field="biology"/>
     <issn>1040-4651</issn>
     <eissn>1531-298X</eissn>
-    <updated>2016-07-27T09:20:15+00:00</updated>
+    <updated>2016-08-03T05:27:07+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -104,7 +104,7 @@
   <bibliography hanging-indent="true" et-al-min="13" et-al-use-first="1">
     <sort>
       <key macro="author"/>
-      <key variable="title"/>
+      <key variable="year-suffix"/>
     </sort>
     <layout suffix=".">
       <text macro="author" font-weight="normal"/>
