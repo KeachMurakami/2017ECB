@@ -113,7 +113,7 @@
   For instance, when differences in dry weight between plants grown under white LEDs and those grown under fluorescent lamps are analyzed and *P*~n~ is used as an explanatory variable, the measurements should be made using the white LEDs for the plants grown under white LEDs and using the fluorescent lamps for those grown under fluorescent lamps.
   In both prospective and retrospective studies, these simple *in situ* measurements will eliminate the problems caused by the interaction between the growth and the measuring light.
 
-  On the other hand, in descriptive studies that make no assumption about the *in situ* conditions, *P*~n~ measurements should be made under several SPDs of light including PSII- and PSI-light.
+  On the other hand, in descriptive studies that hardly make assumption about the *in situ* conditions, *P*~n~ measurements should be made under several SPDs of light including PSII- and PSI-light.
   It is better for researchers to report on the ‘general’ characteristics of the leaves in these studies.
   Therefore, the interaction should be tested so as not to make biased evaluations.
   If there is any interaction, the results should be descriptively reported and should not be generalized.
