@@ -137,69 +137,6 @@
   We thank Dr Sander W. Hogewoning (Plant Lighting B.V., the Netherlands) for providing data of absorpbance spectra of photosystems.
   This work was supported by JSPS KAKENHI Grant Number 26·9372.
 
-```{r Captions}
-CapEED <-
-  "Fig. 1  Excitation balance between photosystems in response to wavelength of measuring light. Spectrum was calculated from absorbance spectra of PSII and PSI complexes in solvent (Hogewoning et al. 2012)."
-
-CapETRs <-
-  "Fig. 2  Conceptual diagrams of effects of excitation energy distribution between photosystems (PSII and PSI) on photosynthetic electron transport rate (ETR). Figure shows electron flow (grey lines) and energy flow (black lines) in leaves grown under PSII-light (A, B) and PSI-light (C, D) and measured using PSII-light (A, C) and PSI-light (B, D)."
-
-CapInteract <-
-  "Fig. 3  Conceptual diagram of photosynthetic electron transport rates per absorbed photons by leaves grown under PSII-light (PSII-leaves) and PSI-light (PSI-leaves) in response to the PSII/PSI-bised level of measuring light."
-
-CapSPD <-
-  'Fig. 4  Spectral photon flux density distributions of light provided by (a) fluorescent lamp (FL; FPL55EX-N<sup>1</sup>); metal halide lamp (MH; M220FCELS-W/BUD<sup>1</sup>); high-pressure sodium lamp (HPS; NH220FLS<sup>1</sup>), (b) blue (B; HBL3-3S55-LE<sup>2</sup>), red (R; SRK3-3A80-LE<sup>2</sup>), far-red (FR; L735-36AU<sup>3</sup>), and white (W; NSPW310DS<sup>4</sup>) light-emitting diodes, and (c) incident and leaf-transmitted sunlight. Distributions at a photon flux density of 100 µmol m<sup>--2</sup> s<sup>--1</sup> within 400--750 nm are shown. Grey shading indicates far-red waveband (700--750 nm). Distribution of sunlight is from International Electrotechnical Commission Standard 60904–3 [@IEC2007]. Distribution of leaf-transmitted sunlight was calculated from that of incident sunlight and transmittance spectrum of cucumber leaf (Murakami et al. 2016).<br><sup>1</sup>IWASAKI ELECTRIC CO., LTD, Tokyo, Japan; <sup>2</sup>Tricon Co., Shimane, Japan; <sup>3</sup>Epitex Inc., Kyoto, Japan; <sup>4</sup>Nichia Chemical Industries Ltd., Tokushima, Japan.'
-```
-
-```{r InteractionPict, eval = evalFig}
-
-X_div <- 101
-X_range <- seq(0, 1, length.out = X_div)
-x_breaks <- c(0.2, 0.4, 0.65)
-
-
-InteractionDat <-
-  data_frame(X = rep(X_range, times = 2),
-           ETR = c(sqrt(dbeta(X_range, 4.5, 3.5)) * 1.1, sqrt(dbeta(X_range, 3, 5))),
-           Trtm = rep(c("PSII-leaves", "PSI-leaves"), each = X_div))
-
-InteractionLabel <-
-  InteractionDat %>%
-  group_by(Trtm) %>%
-  summarise(ETR = max(ETR)) %>%
-  left_join(., InteractionDat, by = c("Trtm", "ETR"))
-
-InteractionPoint <-
-  InteractionDat %>%
-  filter(X %in% x_breaks)
-  
-InteractionText <-
-  InteractionDat %>%
-  filter(X %in% x_breaks) %>%
-  mutate(labels = c("far-red LED light", "Sunlight", "blue + red LED light", rep("", length(x_breaks)))) %>%
-  mutate(ETR = c(0.1, 0.1, 0.1, numeric(length(x_breaks))))
-
-InteractionView <-
-  InteractionDat %>%
-  ggplot(aes(X, ETR, linetype = Trtm, fill = Trtm, group = Trtm)) +
-  theme_bw2() +
-  theme(axis.text.y = element_blank(),
-        axis.ticks = element_blank(),
-        panel.grid.major = element_blank()) +
-  geom_vline(aes(xintercept = x_breaks[1]), linetype = 3, size = .75, col = "grey") +
-  geom_vline(aes(xintercept = x_breaks[2]), linetype = 3, size = .75, col = "grey") +
-  geom_vline(aes(xintercept = x_breaks[3]), linetype = 3, size = .75, col = "grey") +
-  geom_line() +
-  geom_point(data = InteractionPoint, col = "black", size = 3, shape = 21) +
-  geom_text(data = InteractionLabel, aes(x = X, y = ETR, label = Trtm), vjust = -1) +
-  geom_text(data = InteractionText, aes(label = labels), vjust = 1) +
-  scale_fill_manual(values = c("white", "black")) +
-  scale_linetype_manual(values = c(2, 1)) +
-  scale_x_continuous(breaks = c(0.07, 0.92), limits = c(0.05, 0.95), labels = c("PSI-biased", "PSII-biased")) +
-  xlab("PSII/PSI-biased level of measuring light") +
-  ylab("Relative electron transport rate") +
-  gg_y(c(0, 2))
-```
 
 ```{r EED, eval = evalFig}
 library(EBImage)
@@ -247,17 +184,67 @@ EEDs <-
     filter(wavelength > 400)  %>%
     replace_na(list(AlltoPSII = 0)) %>%
     ggplot(aes(x = wavelength, y = AlltoPSII)) +
-    theme_bw2() +
-    theme(panel.grid.major = element_blank()) +
+    theme_thesis(base_family = "serif", base_size = base_size) +
     geom_hline(yintercept = 0.5, col = "grey50", linetype = 3) +
     gg_x(c(380, 770)) +
     # geom_ribbon(aes(ymin = AlltoPSII_max, ymax = AlltoPSII_min), col = "grey50") +
     geom_line() +
     scale_y_continuous(labels = c("0    ", "0.25", "0.50", "0.75", "1.00"),
                        breaks = c(0, 0.25, 0.5, 0.75, 1),
-                       limits = c(0, 1.0),
+                       limits = c(-.005, 1.005),
                        expand = c(0, 0)) +
     xlab("Wavelength [nm]") + ylab("Fraction of the excitation energy distributed to PSII")
+```
+
+```{r InteractionPict, eval = evalFig}
+
+X_div <- 101
+X_range <- seq(0, 1, length.out = X_div)
+x_breaks <- c(0.2, 0.4, 0.65)
+
+
+InteractionDat <-
+  data_frame(X = rep(X_range, times = 2),
+           ETR = c(sqrt(dbeta(X_range, 4.5, 3.5)) * 1.1, sqrt(dbeta(X_range, 3, 5))),
+           Trtm = rep(c("PSII-leaves", "PSI-leaves"), each = X_div))
+
+InteractionLabel <-
+  InteractionDat %>%
+  group_by(Trtm) %>%
+  summarise(ETR = max(ETR)) %>%
+  left_join(., InteractionDat, by = c("Trtm", "ETR"))
+
+InteractionPoint <-
+  InteractionDat %>%
+  filter(X %in% x_breaks)
+  
+InteractionText <-
+  InteractionDat %>%
+  filter(X %in% x_breaks) %>%
+  mutate(labels = c("far-red LED light", "Sunlight", "blue + red LED light", rep("", length(x_breaks)))) %>%
+  mutate(ETR = c(0.1, 0.1, 0.1, numeric(length(x_breaks))))
+
+InteractionView <-
+  InteractionDat %>%
+  ggplot(aes(X, ETR, linetype = Trtm, fill = Trtm, group = Trtm)) +
+  theme_thesis(base_family = "serif", base_size = base_size) +
+  geom_vline(aes(xintercept = x_breaks[1]), linetype = 3, size = .75, col = "grey") +
+  geom_vline(aes(xintercept = x_breaks[2]), linetype = 3, size = .75, col = "grey") +
+  geom_vline(aes(xintercept = x_breaks[3]), linetype = 3, size = .75, col = "grey") +
+  geom_line() +
+  geom_point(data = InteractionPoint, col = "black", size = 3, shape = 21) +
+  geom_text(data = InteractionLabel, aes(x = X, y = ETR, label = Trtm), vjust = -1, family = "serif", size = Annotate_size) +
+  geom_text(data = InteractionText, aes(label = labels), vjust = 1, family = "serif", size = Annotate_size) +
+  scale_fill_manual(values = c("white", "black")) +
+  scale_linetype_manual(values = c(2, 1)) +
+  scale_x_continuous(breaks = c(0.07, 0.92),
+                     limits = c(0.05, 0.95),
+                     labels = c("PSI-biased", "PSII-biased")) +
+  scale_y_continuous(breaks = NULL,
+                     limits = c(-0.05, 2.05)) +
+  xlab("PSII/PSI-biased level of measuring light") +
+  ylab("Relative electron transport rate")
+  
 ```
 
 ```{r Spectra, eval = evalFig}
@@ -342,7 +329,7 @@ SPD_labels <-
   data_frame(variable = c("FL", "MH", "HPS", "B", "R", "FR", "W", "Sun", "Shade"),
              wavelength = c(435, 520, 570, 448, 660, 735, 460, 450, 700),
              value = c(2.2, .6, 3, 4, 4.2, 3.8, 1.3, 0.6, 2),
-             label = c("FL", "MH", "HPS", "B", "R", "FR", "W", "Sunlight", "Leaf transmitted sunlight"),
+             label = c("FL", "MH", "HPS", "B", "R", "FR", "W", "Sunlight", "Leaf-transmitted sunlight"),
              panel = rep(panel_names,  c(3, 4, 2)))
 
 SPD_panel <-
@@ -360,24 +347,23 @@ SPDs <-
   bind_rows(., OceanSPDs, LEDs) %>%
   filter(between(wavelength, 380, 820)) %>%
   ggplot(aes(x = wavelength, y = value, group = variable, col = variable, linetype = variable)) +
-  theme_bw2() +
-  theme(strip.background = element_blank(),
-        strip.text = element_blank(),
-        panel.grid.major = element_blank()) +
+  theme_thesis(base_family = "serif", base_size = base_size) +
   geom_rect(aes(xmin = 700, xmax = 750, ymin = 0, ymax = +Inf), fill = "grey90", col = NA) +
   geom_line() +
-  geom_text(data = SPD_labels, aes(x = wavelength, y = value, label = label)) +
-  geom_text(data = SPD_panel, col = "black", aes(label = panel)) +
+  geom_text(data = SPD_labels, aes(x = wavelength, y = value, label = label), family = "serif", size = Annotate_size) +
+  geom_text(data = SPD_panel, col = "black", aes(label = panel), family = "serif", size = Annotate_size * .8) +
   scale_linetype_manual(values = c(1, 1, 3, 2, 4, 2, 2, 1, 4)) +
   scale_color_manual(values = c("blue", "black", "darkred", "orange", "purple", "red", "grey25", "black", "black")) +
   facet_grid(panel ~ .) +
-  gg_xy(c(380, 820, 0, 4.5)) +
+  gg_xy(c(380, 820, -.01, 4.5)) +
   xlab("Wavelength [nm]") + ylab(u_SPFD("Spectral photon flux density"))
-
 ```
 
 ```{r, eval = evalFig, html.cap = CapEED}
 EEDs
+# pdf("./Figs/EEDs.pdf", family = "Times", width = 3.15, height = 2.5)
+#   EEDs + theme_thesis(base_size = 5)
+# dev.off()
 ```
 
 
@@ -388,9 +374,15 @@ knitr::include_graphics("./Figs/FigETR.png")
 
 ```{r, eval = evalFig, html.cap = CapInteract}
 InteractionView
+# pdf("./Figs/Interactions.pdf", family = "Times", width = 3.15, height = 2.5)
+#   InteractionView + theme_thesis(base_size = 5)
+# dev.off()
 ```
 
 
 ```{r, eval = evalFig, html.cap = CapSPD}
 SPDs
+# pdf("./Figs/SPDs.pdf", family = "Times", width = 3.15, height = 4)
+#   InteractionView + theme_thesis(base_size = 5)
+# dev.off()
 ```

@@ -1,49 +1,54 @@
 ---
 title: "Evaluating effects of light quality: A basis for selecting the spectral photon flux density distribution of light for measuring photosynthetic rates of leaves"
 author: "Keach Murakami^1\\*^, Ryo Matsuda^1^, Kazuhiro Fujiwara^1^"
-bibliography: ~/GitHub/BeeLabR/BibTex/with.bib
 csl: ECB.csl
+bibliography: ~/GitHub/BeeLabR/BibTex/With.bib
 header-includes:
-  - \setmainfont{Helvetica}
-  - \usepackage{zxjatype} # 日本語を使う
-  - \setjamainfont{Hiragino Kaku Gothic Pro} # 日本語フォント
-  - \usepackage{lscape} # 図を回転する
+  - \setmainfont{Times New Roman}
+  # - \setmainfont{Helvetica Neue}
+  - \usepackage{zxjatype} # 日本語を使うためのパッケージ
+  - \setjamainfont{Hiragino Kaku Gothic Pro} # 日本語フォントの指定
+  - \usepackage{lscape} # 図を回転するためのパッケージ
   - \newcommand{\blandscape}{\begin{landscape}} # 図回転用のbegin command
   - \newcommand{\elandscape}{\end{landscape}} # 図回転用のend command
-  - \usepackage{setspace} # 行間の調節
+  - \usepackage{setspace} # 行間の調節ためのパッケージ
   - \newcommand{\bdoublespace}{\begin{spacing}{1.5}} # 行間を広げるbegin command
   - \newcommand{\edoublespace}{\end{spacing}{1.5}} # 行間を広げるbegin command
+  - \usepackage{lineno} # 行番号を追加するためのパッケージ
+  - \linenumbers # 行番号を追加する
 
 output:
-# pdf_document:
-#   latex_engine: xelatex
-#     toc: TRUE # table of contents
-#     toc_depth: 3
-#     number_sections: TRUE
-#     fig_caption: TRUE
-# fontsize: 12pt
-# geometry: margin=1.2in
-  html_document:
-    toc: TRUE
-    depth: 3
-    theme: sandstone
-    self_contained: TRUE
+  pdf_document:
+    latex_engine: xelatex
     fig_caption: TRUE
+fontsize: 20pt
+geometry: margin=1.2in
+  # html_document:
+  #   toc: TRUE
+  #   depth: 3
+  #   theme: sandstone
+  #   self_contained: TRUE
+  #   fig_caption: TRUE
+  # word_document:
+  #   toc: FALSE
+  #   fig_caption: TRUE
 ---
 
 ```{r, echo = F, message = F}
 rm(list = ls())
 
 evalFig <- T
+base_size <- 20
+Annotate_size <- 6
+
+source("./caption.R")
 if(evalFig){
   devtools::source_url("https://raw.githubusercontent.com/KeachMurakami/Sources/master/Startup_silent.R")
-} else {
-  library(knitr)
 }
 
-opts_chunk$set(cache = F, echo = FALSE, fig.width = 5, fig.height = 5,
-               out.width = '500pixel', out.height = '500pixel', dpi = 100,
-               message = FALSE, warning = FALSE, eval = T)
+knitr::opts_chunk$set(cache = F, echo = FALSE, fig.width = 7, fig.height = 7, dpi = 300,
+                      message = FALSE, warning = FALSE, eval = T)
+               # out.width = '500pixel', out.height = '500pixel', dpi = 100,
 ```
 
 Affiliations: ^1^Graduate School of Agricultural and Life Sciences, The University of Tokyo
@@ -51,8 +56,6 @@ Affiliations: ^1^Graduate School of Agricultural and Life Sciences, The Universi
 Address: ^1^Yayoi, Bunkyo, Tokyo, 113--8657, Japan
 
 e-mail: keach.murakami@gmail.com  
-
-------
 
 **Abstract**
 
