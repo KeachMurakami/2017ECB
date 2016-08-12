@@ -2,7 +2,7 @@ CapEED <-
   "Fig. 1  Typical excitation balance between photosystems in response to wavelength of measuring light. Spectrum was calculated from absorbance spectra of PSII and PSI complexes in solvent (Hogewoning et al. 2012)."
 
 CapETRs <-
-  "Fig. 2  Conceptual diagrams of effects of excitation energy distribution between photosystems (PSII and PSI) on photosynthetic electron transport rate (ETR). Figure shows electron flow (grey lines) and energy flow (black lines) in leaves grown under PSII-light (A, B) and PSI-light (C, D) and measured using PSII-light (A, C) and PSI-light (B, D)."
+  "Fig. 2  Conceptual diagrams of effects of excitation energy distribution between photosystems (PSII and PSI) on photosynthetic electron transport rate (ETR). Figure shows electron flow (grey lines) and energy flow (black lines) in leaves grown under PSII-light (a, b) and PSI-light (c, d) and measured using PSII-light (a, c) and PSI-light (b, d). Excitation energy distribution properties of leaves are adjusted depending on growth light. GL: growth light, ML: measuring light."
 
 CapInteract <-
   "Fig. 3  Conceptual diagram of photosynthetic electron transport rates per absorbed photons by leaves grown under PSII-light (PSII-leaves) and PSI-light (PSI-leaves) in response to the PSII/PSI-bised level of measuring light."

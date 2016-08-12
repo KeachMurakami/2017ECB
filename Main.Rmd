@@ -17,8 +17,8 @@
   The *P*~n~ of W-grown-leaves was greater than that of WFR-grown-leaves under BR-light, while the rates were comparable under the artificial sunlight [@Murakami_et_al2016PP].
   Based on the results obtained from measurement under BR-light, the prospective leaf photosynthetic rate of WFR-grown-plants may be evaluated to be smaller than that of W-grown-plants, despite the comparable rates under sunlight.
 
-  The effect of the SPD of growth light on *P*~n~ depends on the SPD of the measuring light.
-  In other words, the interaction between the SPDs of the growth light and the measuring light affect the *P*~n~ of a leaf.
+  The effect of the SPD of growth light on *P*~n~ depends on the SPD of measuring light.
+  In other words, the interaction between the SPDs of growth light and measuring light affect the *P*~n~ of a leaf.
   In this short article, we describe a plausible mechanism for this interaction, based on the excitation energy distribution balance between the photosystems.
   We then suggest situations in which the interaction should be particularly considered.
   We also discuss good practice for selecting measuring light with an appropriate SPD for *P*~n~ measurements.
@@ -43,8 +43,8 @@
   Light with a given SPD is sometimes categorized as either PSII- or PSI-light according to whether the excitation energy is preferentially distributed to PSII or PSI [e.g. @Chow_et_al1990PNAS; @Melis1991BBA; @Pfannschmidt_et_al2001JBC; @Fan_et_al2007BBA; @Dietzel_et_al2008FJ; @Pfannschmidt_et_al2009AB; @Dietzel_et_al2011PC; @Hogewoning_et_al2012PC].
 
   Because the photosynthetic electron transport reactions occur in series, the electron transport rate (ETR) through the thylakoid membrane is limited by the slowest step (Fig. 2).
-  When there is excess excitation energy at PSII (i.e. under PSII-light), the smaller amoutn of excitation energy distributed to PSI results in lower photochemical reaction rates at PSI than at PSII.
-  This shortage in the EED to PSI limits the ETR, thereby leading to lwoer photochemical quantum yield of PSII (Fig. 2C).
+  When there is excess excitation energy at PSII (i.e. under PSII-light), the smaller amount of excitation energy distributed to PSI results in lower photochemical reaction rates at PSI than at PSII.
+  This shortage in the EED to PSI limits the ETR, thereby leading to lower photochemical quantum yield of PSII and balaced ETR between PSII and PSI (Fig. 2C).
   When PSI absorbs excess excitation energy (i.e. under PSI-light), the excitation energy distributed to PSII limits the ETR and lowers the yield of PSI (Fig. 2B).
   In both cases, the excess energy is dissipated mainly as heat and fluorescence.
   Consequently, the entire photosynthetic quantum yield---ETR per absorbed photons by the leaf---becomes smaller.
@@ -56,7 +56,6 @@
   Under PSII-light, the relative amount of the reaction center complex of PSII to that of PSI in leaves decreases; conversely, under PSI-light, the relative amount increases to achieve a balance [e.g. @Melis1991BBA; @Pfannschmidt_et_al1999Nature].
   These adjustments in the EED properties might help the leaves to maintain a high photosynthetic quantum yield under different growth lights [@Chow_et_al1990PNAS].
   As a result of these adjustments in the EED properties of a leaf, the spectrum of excitation balance (Fig. 1) differs depending on the SPD of the growth light.
-  **PSII-light PSI-light が使われることがある**.
   The categories of light, that is, ‘PSII-light’ and ‘PSI-light’, are defined for a given leaf on a relative scale, not an absolute scale.
   For instance, the SPD of light that is evenly absorbed by PSII and PSI in PSII-light-grown leaves (Fig. 2A), can overexcite PSII in PSI-light-grown leaves (Fig. 2C).
   Therefore, the terms ‘PSII-light’ and ‘PSI-light’ are used only in a relative context.
@@ -71,9 +70,9 @@
   When measured under PSII-light, the yield was higher in the PSII-light-grown leaves; when measured under PSI-light, the yield was higher in the PSI-light-grown leaves.
   Similar trends in the photosynthetic quantum yield of O~2~ evolution [in *Arabidopsis thaliana*; @Walters_Horton1995aPlanta], in the photosynthetic quantum yield of CO~2~ uptake [in *Cucumis sativus*; @Hogewoning_et_al2012PC], and in *P*~n~ [in *C. sativus*, see also Introduction; @Murakami_et_al2016PP] were observed.
 
-  These reports suggested that the EED properties of a leaf might be tuned to the PSII/PSI-biased level of the growth light.
-  It is expected that a leaf will perform a higher ETR per absorbed photons by the leaf under a measuring light with a PSII/PSI-biased level similar to that of the growth light (Fig. 3).
-  When leaves grown under different SPDs of light are compared and evaluated under a specific SPD of light, the results will inevitably be biased depending on the SPD of the measuring light.
+  These reports suggested that the EED properties of a leaf might be tuned to the PSII/PSI-biased level of growth light.
+  It is expected that a leaf will perform a higher ETR per absorbed photons by the leaf under measuring light with a PSII/PSI-biased level similar to that of the growth light (Fig. 3).
+  When leaves grown under different SPDs of light are compared and evaluated under a specific SPD of measuring light, the results will inevitably be biased depending on the SPD of the measuring light.
 
 
 
@@ -87,7 +86,7 @@
   Considering the sensitive adjustments of photosystem stoichiometry in response to the SPD of growth light [e.g. @Walters_Horton1995aPlanta], the interaction should always be taken into account whenever the *P*~n~ and related indices are compared among leaves grown under different SPDs of light.
   Particular attention should be paid to the effects of the interaction on *P*~n~, at least when the measured leaves are expected to represent different EED properties.
   
-  Several studies published over the last decade have investigated the effects of the SPD of the growth light on plant growth and photosynthesis [e.g. @Matsuda_et_al2004PCP; @Matsuda_et_al2007SSPN; @Matsuda_et_al2008PCP; @Hogewoning_et_al2010aJXB; @Hogewoning_et_al2010bJXB; @Shibuya_et_al2015BP; @Trouwborst_et_al2016EEB].
+  Several studies published over the last decade have investigated the effects of the SPD of the growth light on plant growth and photosynthesis [e.g. @Matsuda_et_al2004PCP; @Matsuda_et_al2007SSPN; @Matsuda_et_al2008PCP; @Hogewoning_et_al2010aJXB; @Hogewoning_et_al2010bJXB; @Hogewoning_et_al2012PC; @Shibuya_et_al2015BP; @Trouwborst_et_al2016EEB].
   Growth light provided by most artificial light sources contains little FR light.
   In general, fluorescent lamps, metal halide lamps, high-pressure sodium lamps, and blue, red, and white LEDs used for assimilation lighting all emit typical PSII-light (Fig. 4).
   This is because FR light is hardly ‘photosynthetically active’ and promotes excessive stem elongation.
@@ -108,7 +107,7 @@
   In prospective studies focusing on plant growth after measurements, the measurements should be made under the SPD of light that the plant will be subjected to.
   For instance, when evaluating plants grown under artificial lighting that will be transplanted [e.g. @Kozai2007POP], the measurements should be made under sunlight because the plants will be transferred to a greenhouse and cultivated under sunlight.
   However, the measurements under sunlight may be less reliable because of fluctations in the incident PPFD.
-  In such cases, SPD-controllable light sources might be helpful [e.g. @Yano_Fujiwara2012PM; @Fujiwara_et_al2013Proc] to make *in situ* evaluations under PPFD-stable conditions and to ensure the reproducibility and reliability of the results.
+  In such cases, SPD-controllable light sources might be helpful [e.g. @Yano_Fujiwara2012PM; @Fujiwara_et_al2013Proc] to make *in situ* evaluations under PPFD-stable conditions and to ensure reproducibility and reliability of the results.
   In retrospective studies that aim to explain differences among experimental groups, the measurements should be made under the SPDs of light that the plants received during the treatments.
   For instance, when differences in dry weight between plants grown under white LEDs and those grown under fluorescent lamps are analyzed and *P*~n~ is used as an explanatory variable, the measurements should be made using the white LEDs for the plants grown under white LEDs and using the fluorescent lamps for those grown under fluorescent lamps.
   In both prospective and retrospective studies, these simple *in situ* measurements will eliminate the problems caused by the interaction between the growth and the measuring light.

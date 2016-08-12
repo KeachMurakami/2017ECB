@@ -18,20 +18,20 @@ header-includes:
   - \linenumbers # 行番号を追加する
 
 output:
-  pdf_document:
-    latex_engine: xelatex
-    fig_caption: TRUE
-fontsize: 20pt
-geometry: margin=1.2in
+#   pdf_document:
+#     latex_engine: xelatex
+#     fig_caption: TRUE
+# fontsize: 20pt
+# geometry: margin=1.2in
   # html_document:
   #   toc: TRUE
   #   depth: 3
   #   theme: sandstone
   #   self_contained: TRUE
   #   fig_caption: TRUE
-  # word_document:
-  #   toc: FALSE
-  #   fig_caption: TRUE
+  word_document:
+    toc: FALSE
+    fig_caption: TRUE
 ---
 
 ```{r, echo = F, message = F}
@@ -39,7 +39,7 @@ rm(list = ls())
 
 evalFig <- T
 base_size <- 20
-Annotate_size <- 6
+Annotate_size <- 5
 
 source("./caption.R")
 if(evalFig){
@@ -59,14 +59,14 @@ e-mail: keach.murakami@gmail.com
 
 **Abstract**
 
-  The spectral photon flux density distribution (SPD) of light during growth and for measurements do not only directly affect the net photosynthetic rate (*P*~n~) but also interacts on it.
-  A plausible mechanisms of the interaction, some situations in which the interaction should be concerned, and the selection of appropriate measuring light for evaluation of photosynthesis are summarized.
-  *P*~n~ should be measured under *in situ* conditions depending on the purpose of the study.
-  In prospective studies focusing on plant growth after the measurements, the measurements should be made under the SPD of light that the plant will be subject to.
-  In retrospective studies aiming to elucidate causes of differences between the experimental groups, the measurements should be made under the SPDs of light that the plants have received during the treatments.
-  In descriptive studies, *P*~n~ should be evaluated under several SPDs of measuring light to comprehend general photosynthetic characteristics of the leaves.
-  *P*~n~ under a single-pattern SPD of measuring light is only an aspect of the photosynthetic characteristics of the leaf.
-  The obtained result must be discussed in connection with the SPD of measuring light so as not to make biased evaluation caused by the interaction.
+  The spectral photon flux density distributions (SPDs) of light during growth and for measurements do not only directly affect the net photosynthetic rate (*P*~n~), but also interacts on it.
+  This paper summarizes a plausible mechanism of the interaction, some situations in which the interaction should be considered, and recommendations for selecting appropriate measuring light to evaluate photosynthesis.
+  The *P*~n~ should be measured under *in situ* conditions, depending on the purpose of the study.
+  For studies focusing on plant growth after measurements, *P*~n~ should be measured under the SPD of light that the plant will be subjected to.
+  In retrospective studies aiming to elucidate the causes of differences among experimental groups, measurements should be made under the SPDs of the lights the plants were grown under.
+  In descriptive studies, *P*~n~ should be evaluated under several SPDs of measuring light to understand the general photosynthetic characteristics of the leaves.
+  The *P*~n~ under a single-pattern SPD of measuring light is only one aspect of the photosynthetic characteristics of a leaf.
+  The obtained results must be discussed in relation to the SPD of measuring light so as not to make biased evaluations.
 
 ------
 
