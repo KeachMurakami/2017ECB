@@ -1,5 +1,5 @@
 ---
-title: "Evaluating effects of light quality: A basis for selecting the spectral photon flux density distribution of light for measuring photosynthetic rates of leaves"
+title: "A basis for selecting the spectral photon flux density distribution of light for measuring leaf photosynthetic rates in light quality response studies"
 author: "Keach Murakami^1\\*^, Ryo Matsuda^1^, Kazuhiro Fujiwara^1^"
 csl: ECB.csl
 bibliography: ~/GitHub/BeeLabR/BibTex/With.bib
@@ -18,20 +18,20 @@ header-includes:
   - \linenumbers # 行番号を追加する
 
 output:
-#   pdf_document:
-#     latex_engine: xelatex
-#     fig_caption: TRUE
-# fontsize: 20pt
-# geometry: margin=1.2in
+  pdf_document:
+    latex_engine: xelatex
+    fig_caption: TRUE
+fontsize: 20pt
+geometry: margin=1.2in
   # html_document:
   #   toc: TRUE
   #   depth: 3
   #   theme: sandstone
   #   self_contained: TRUE
   #   fig_caption: TRUE
-  word_document:
-    toc: FALSE
-    fig_caption: TRUE
+  # word_document:
+  #   toc: FALSE
+  #   fig_caption: TRUE
 ---
 
 ```{r, echo = F, message = F}
