@@ -58,16 +58,13 @@ Address: ^1^Yayoi, Bunkyo, Tokyo, 113--8657, Japan
 e-mail: keach.murakami@gmail.com  
 
 **Abstract**
-
-  The spectral photon flux density distributions of light during growth and for measurements do not only directly affect the net photosynthetic rate (*P*~n~).
-  Moreover, 
+  Relative spectral distributions of light during growth and for measurements do not only directly affect the net photosynthetic rate (*P*~n~), but also indirectly affect it through the interaction between the distributions of the growth and the measuring light.
   This paper summarizes a plausible mechanism of the interaction, some situations in which the interaction should be considered, and recommendations for selecting appropriate measuring light to evaluate photosynthesis.
-  The *P*~n~ should be measured under *in situ* conditions, depending on the purpose of the study.
-  For studies focusing on the evaluation of plant growth after measurements, *P*~n~ should be measured under the SPD of light that the plant will be subjected to.
-  In retrospective studies aiming to elucidate the causes of differences among experimental groups, measurements should be made under the SPDs of the lights the plants were grown under.
-  In descriptive studies, *P*~n~ should be evaluated under several SPDs of measuring light to understand the general photosynthetic characteristics of the leaves.
+  In agricultural and horticultural studies, the *P*~n~ should be measured under *in situ* conditions, depending on the purpose of the study.
+  For prospective studies focusing on the evaluation of plant growth after measurements, *P*~n~ should be measured under the spectral distribution of light to which the plant will be subjected.
+  In retrospective studies aiming to elucidate the causes of differences in growth brought about by the different growth conditions, measurements should be made under the spectral distributions of the lights under which the plants were grown.
   The *P*~n~ under a single spectral distribution of measuring light is only one aspect of the photosynthetic characteristics of a leaf.
-  The obtained results must be discussed in relation to the SPD of measuring light so as not to make biased evaluations.
+  The obtained results must be discussed in relation to the spectral distribution of measuring light so as not to make biased evaluations.
 
 ------
 

@@ -1,15 +1,14 @@
 # Introduction
 
   The photosynthetic rate is one of the most important and fundamental aspects for plant growth.
-  In many researches this rate is measured, evaluated, and compared among the leaves of plants cultivated under different conditions.
+  In many studies this rate is measured, evaluated, and compared among the leaves of plants cultivated under different conditions.
   The measured rates are also used to calculate other photosynthesis-related indices, such as photosynthetic light-, water-, and nitrogen-use efficiencies.
   In agricultural and horticultural researches, the effectiveness of treatments is sometimes discussed based on the measured photosynthetic rates and calculated indices.
-  In these researches, the *P*~n~ should be measured appropriately so that researcher can answer the research questions.
 
   A number of researches have reported that the relative spectral photon flux density (PFD) distribution of light used for measurement (i.e. measuring light or actinic light) affects leaf net photosynthetic rates (*P*~n~) [e.g. @McCree1972AM; @Inada1976PCP].
-  To eliminate this direct effect from the comparison, *P*~n~ is usually measured under a common spectral distribution of measuring light irrespective of leaf growth conditions in agricultural and horticultural researches.
+  To eliminate this direct effect from the comparison, *P*~n~ is usually measured under a common spectral distribution of measuring light irrespective of leaf growth conditions in agricultural and horticultural studies
   One of the most widely-used measuring lights is a mixture of blue and red light (BR-light) provided by light-emitting diodes (LEDs) installed in commercial photosynthesis analysis systems (e.g. LI6400XT, LI-COR Inc., Lincoln, NE; GFS-3000, Heinz Walz GmbH, Effeltrich, Germany).
-  The use of artificial light sources enables precise control of the spectral PFD distribution on the leaf, and therefore, ensures reproducibility and reliability among experiments.
+  The use of artificial light sources enables precise control of the spectral distribution of measuring light on the leaf, and therefore, ensures reproducibility and reliability among experiments.
 
   @Walters2005JXB noted that photosynthetic rates measured with a relative spectral distribution of light different from that of the growth light do not necessarily reflect the functioning of photosynthesis under the actual growth conditions.
   Indeed, we have demonstrated this problem in *P*~n~ measurements in our recent experiment [@Murakami_et_al2016PP].
@@ -21,8 +20,8 @@
   In other words, the interaction between the relative spectral distributions of growth light and measuring light affect the *P*~n~ of a leaf.
   In this short article, we describe a plausible mechanism for this interaction, based on the excitation energy distribution balance between the photosystems.
   We then suggest situations in which the interaction should be particularly considered.
-  We also discuss good practice for selecting measuring light with an appropriate SPD for *P*~n~ measurements.
-  Several mechanisms other than the excitation balance, such as stomatal responses [@Shimazaki_et_al2007AnnRev], photoinhibition [@Zavafer_et_al2015JPP], and vertical PFD profile within a leaf [@Terashima_et_al2009PCP] affect photosynthesis via the SPD of measuring light.
+  We also discuss good practice for selecting measuring light with appropriate relative spectral distributions for *P*~n~ measurements.
+  Several mechanisms other than the excitation balance, such as stomatal responses [@Shimazaki_et_al2007AnnRev], photoinactivation [@Zavafer_et_al2015JPP], and vertical PFD profile within a leaf [@Terashima_et_al2009PCP] affect photosynthesis via the relative spectral distribution of measuring light.
   Although these subjects are not discussed in this article, the cited articles are available for these topics.
 
 
@@ -39,14 +38,13 @@
   Within the chlorophyll (chl) absorption band (approximately 350--750 nm), longer wavelengths of light (> 680--690 nm) are estimated to be preferentially absorbed by PSI, and PSI is drastically overexcited compared with PSII [Fig. 1; @Evans_Anderson1987BBA; @Hogewoning_et_al2012PC; @Wientjes_et_al2013BBA; @Laisk_et_al2014BBA].
   This is because only chl *a* can absorb longer wavelengths of light, and PSI contains more chl *a* than does PSII.
   In contrast, monochromatic light at shorter wavelengths (< 680--690 nm) is estimated to be preferentially absorbed by PSII, or evenly absorbed by both photosystems [Fig. 1; @Evans_Anderson1987BBA; @Hogewoning_et_al2012PC; @Wientjes_et_al2013BBA; @Laisk_et_al2014BBA].
-  These wavelength dependencies of the excitation balance between PSII and PSI determine the excitation energy distribution (EED)---the fraction of the excitation energy distributed to PSII (or PSI) to that absorbed by the leaf or by the photosystems---under a given relative spectral PFD distribution of light.
-  
-  For instance, ETR can be estimated by a following eauations originated from @Genty_et_al1989BBA,  
+  These wavelength dependencies of the excitation balance between PSII and PSI determine the excitation energy distribution (EED)---the fraction of the excitation energy distributed to PSII (or PSI) to that absorbed by the leaf or by the photosystems---under a given relative spectral distribution of light.
+  The idea of EED is adopted in the widely-accepted equations for ETR estimation originated from @Genty_et_al1989BBA,  
   ETR = PFD × α~leaf~ × β~leaf~ × *Y*~II~,  
   ETR = PFD × α~PS~ × β~PS~ × *Y*~II~,  
-  where α~leaf~ (frequently assumed to be 0.84) and α~PS~ are absorptances of the leaf and the photosystems, β~leaf~ (frequently assumed to be 0.50) and β~PS~ are EEDs to PSII on the basises of the absorptions by the leaf and by the photosystems, and *Y*~II~ (also known as Φ~PSII~, *F*~q~'/*F*~m~', or Δ*F*/*F*~m~') is a photochemical quantum yield of PSII obtained from chl fluorescence measurement.
+  where α~leaf~ (frequently assumed to be 0.84) and α~PS~ are absorptances of the leaf and the photosystems, β~leaf~ (frequently assumed to be 0.50) and β~PS~ are EEDs to PSII on the bases of the absorptions by the leaf and by the photosystems, and *Y*~II~ (also known as Φ~PSII~, *F*~q~'/*F*~m~', or Δ*F*/*F*~m~') is a photochemical quantum yield of PSII obtained from chl fluorescence measurement.
   Although β~leaf~ is frequently assumed to be 0.50, it is not always valid as mentioned above.
-  Lights with different relative spectral distributions are sometimes categorized as PSII- or PSI-light based on the β~PS~ approximated from their spectra and the spectrum of excitation balance (i.e. Fig. 1)---mainly judged by the PFD in the FR waveband [e.g. @Chow_et_al1990PNAS; @Melis1991BBA; @Pfannschmidt_et_al2001JBC; @Dietzel_et_al2008FJ; @Pfannschmidt_et_al2009AB; @Dietzel_et_al2011PC; @Hogewoning_et_al2012PC].
+  Lights with different spectral distributions are sometimes categorized into PSII- and PSI-light based on the β~PS~ approximated from their relative spectral distributions and the spectrum of excitation balance (i.e. Fig. 1)---mainly judged by the proportions of PFDs in the FR waveband [e.g. @Chow_et_al1990PNAS; @Melis1991BBA; @Pfannschmidt_et_al2001JBC; @Dietzel_et_al2008FJ; @Pfannschmidt_et_al2009AB; @Dietzel_et_al2011PC; @Hogewoning_et_al2012PC].
 
   Because the photosynthetic electron transport reactions occur in series, the electron transport rate (ETR) is limited by the slowest step (Fig. 2).
   When there is excess excitation energy at PSII (i.e. under PSII-light), the smaller amount of excitation energy distributed to PSI results in lower potential ETR at PSI than at PSII.
@@ -58,20 +56,19 @@
   Therefore, balancing the EED between PSII and PSI is essential for plants to retain a high photosynthetic quantum yield.
   Prolonged imbalances in the EED are supposed to damage leaves by generating reactive oxygen species, which cause oxidative damage to chloroplast components [for reviews, see @Asada1999AnnRev; @Asada2006PP].
 
-  Apparently, the EED at a given relative spectral PFD distribution of light is also affected by the composition of the thylakoid components, especially the stoichiometry between PSII and PSI.
+  Apparently, the EED at a given relative spectral distribution of light is affected by the composition of the thylakoid components, especially the stoichiometry between PSII and PSI.
   The stoichiometry appears to adjust to the spectral PFD distribution of the growth light.
-  Under PSII-light, the relative amount of the reaction center complex of PSII to that of PSI in leaves decreases; conversely, under PSI-light, the relative amount increases to achieve a balance [e.g. @Melis1991BBA; @Pfannschmidt_et_al1999Nature].
-  These adjustments in the EED properties might help the leaves to maintain a high photosynthetic quantum yield under different growth lights [@Chow_et_al1990PNAS].
-  As a result of these adjustments in the EED properties of a leaf, the spectrum of excitation balance (Fig. 1) differs depending on the SPD of the growth light.
-  The categories of light, that is, ‘PSII-light’ and ‘PSI-light’, are defined for a given leaf on a relative scale, not an absolute scale.
-  For instance, the relative spectral PFD distribution of light that is evenly absorbed by PSII and PSI in PSII-light-grown leaves (i.e. β~PS~ = 0.5; Fig. 2A), can overexcite PSII in PSI-light-grown leaves (i.e. β~PS~ > 0.5; Fig. 2C).
-  Therefore, the terms ‘PSII-light’ and ‘PSI-light’ are used only in a relative context in connection to the given leaf.
-  In the short term within an hour, an imbalance in the EED is, at least partly, relieved by the reversible allocation of the light-harvesting antenna complexes of PSII (LHCII) between PSII and PSI [state transition; for a review, see @Goldschmidt-Clermont_Bassi2015CurOpin].
+  When growth light was changed from PSII-light to PSI-light, the relative amount of the reaction center complex of PSII to that of PSI in leaves increases; conversely, when changed from PSI-light to PSII-light, the relative amount decreases [e.g. @Melis1991BBA; @Pfannschmidt_et_al1999Nature].
+  These adjustments in the EED properties help the leaves to maintain a high photosynthetic quantum yield under different growth lights [@Chow_et_al1990PNAS].
+  As a result of these adjustments in the EED properties of a leaf, the spectrum of excitation balance (Fig. 1) differs depending on the relative spectral distribution of the growth light.
+  Note that the categories of light, that is, ‘PSII-light’ and ‘PSI-light’, are defined for a given leaf on a relative scale, not an absolute scale.
+  For instance, a relative spectral distribution of light that is evenly absorbed by PSII and PSI in PSII-light-grown leaves (i.e. β~PS~ = 0.5; Fig. 2A), can overexcite PSII in PSI-light-grown leaves (i.e. β~PS~ > 0.5; Fig. 2C).
+  In the short term within an hour, an imbalance in the EED is, at least partly, relieved by the reversible allocation of the light-harvesting antenna complexes of PSII between PSII and PSI [state transition; for a review, see @Goldschmidt-Clermont_Bassi2015CurOpin].
   Although a slight imbalance in the EED might be compensated for by state transitions, the long-term adjustments in the EED properties are thought to occur when state transitions are insufficient to counterbalance the uneven EED [@Dietzel_et_al2008FJ].
 
-  The SPD of growth light affects the EED properties of a leaf.
+  The relative spectral distribution of growth light affects the EED properties of a leaf.
   This modifies the responses of ETR, and therefore that of *P*~n~, to the relative spectral PFD distribution of measuring light.
-  Thus, the SPDs of growth light and measuring light not only directly affect the *P*~n~, but also indirectly affect it through the interaction between the growth and the measuring light.
+  Thus, the relative spectral distributions of growth light and measuring light do not only directly affect the *P*~n~, but also indirectly affect it through the interaction between the distributions of the growth and the measuring lights.
   This expected interaction has been reported in several researches [@Chow_et_al1990PNAS; @Walters_Horton1995aPlanta; @Hogewoning_et_al2012PC; @Murakami_et_al2016PP].
   In their pioneering research, @Chow_et_al1990PNAS grew *Pisum sativum* plants under light provided by cool-white fluorescent lamps with yellow Plexiglas (PSII-light) and incandescent bulbs with red Plexiglas (PSI-light) and measured the photosynthetic quantum yield of O~2~ evolution---O~2~ evolution rate per absorbed photons by the leaf---under the PSII- and PSI-lights reciprocally.
   When measured under PSII-light, the yield was higher in the PSII-light-grown leaves than in the PSI-light-grown leaves; when measured under PSI-light, in contrast, the yield was higher in the PSI-light-grown leaves.
@@ -79,7 +76,7 @@
 
   These reports suggested that the EED properties of a leaf might be tuned to the PSII/PSI-biased level of growth light.
   It is expected that a leaf will perform a higher ETR per absorbed photons by the leaf under measuring light with a PSII/PSI-biased level similar to that of the growth light (Fig. 3).
-  When leaves grown under different spectral PFD distributions of light are compared and evaluated under measuring light with a specific relative spectral PFD distribution, therefore, the results will inevitably be biased depending on the SPD of the measuring light.
+  When leaves grown under different spectral distributions of light are compared and evaluated under measuring light with a specific distribution, therefore, the results will inevitably be biased depending on the selecting of the measuring light.
 
 
 
@@ -89,40 +86,40 @@
   Under such conditions, any bias in the ETR is directly reflected in *P*~n~.
   Therefore, the interaction should be considered carefully when measuring *P*~n~ under such conditions.
 
-  The mechanisms of how EED properties adapt to SPD have not yet been fully elucidated as discussed in @Murakami_et_al2016PP.
-  Considering that the photosystem stoichiometry is sensitive to the SPD of growth light [e.g. @Walters_Horton1995aPlanta], the interaction should always be taken into account whenever the *P*~n~ and related indices are compared among leaves grown under different SPDs of light.
+  The mechanisms of how EED properties adapt to relative spectral distributions of growth light have not yet been fully elucidated as discussed in @Murakami_et_al2016PP.
+  Considering that the photosystem stoichiometry is sensitive to the relative spectral distribution of growth light [e.g. @Walters_Horton1995aPlanta], the interaction should always be taken into account whenever the *P*~n~ and related indices are compared among leaves grown with different relative spectral distributions.
   Particular attention should be paid to the effects of the interaction on *P*~n~, at least when the measured leaves are expected to represent different EED properties, as described below.
   
-  Many studies published over the last decade have investigated the effects of the SPD of the growth light on plant growth and photosynthesis [e.g. @Matsuda_et_al2004PCP; @Matsuda_et_al2007SSPN; @Matsuda_et_al2008PCP; @Hogewoning_et_al2010aJXB; @Hogewoning_et_al2010bJXB; @Hogewoning_et_al2012PC; @Shibuya_et_al2015BP; @Trouwborst_et_al2016EEB].
+  Many studies published over the last decade have investigated the effects of the relative spectral distribution of the growth light on plant growth and photosynthesis [e.g. @Matsuda_et_al2004PCP; @Matsuda_et_al2007SSPN; @Matsuda_et_al2008PCP; @Hogewoning_et_al2010aJXB; @Hogewoning_et_al2010bJXB; @Hogewoning_et_al2012PC; @Shibuya_et_al2015BP; @Trouwborst_et_al2016EEB].
   Most light sources used for promoting photosynthetic and growth rates, such as fluorescent lamps, metal halide lamps, high-pressure sodium lamps, and blue, red, and white LEDs, emit light containing little PFD in the FR waveband (i.e. PSII-light; Fig. 4).
-  This is because FR light is hardly ‘photosynthetically active’ and promotes excessive stem elongation.
+  This is because FR light is hardly ‘photosynthetically active’ and causes excessive stem elongation.
   However, several recent papers have suggested the significance of supplemental FR light on plant growth and development [for a review, see @Demotes-Mainard_et_al2016EEB].
-  Since FR light overexcites PSI, leaves grown under PSII-light with supplemental FR light are more similar to PSI-leaves in terms of their EED properties, compared with leaves of plants grown without supplemental FR light.
+  Since FR light overexcites PSI, leaves grown under PSII-light with supplemental FR light may be more similar to PSI-leaves in terms of their EED properties, compared with leaves of plants grown without supplemental FR light.
   Therefore, comparing the *P*~n~ of leaves of plants grown with and without supplemental FR light using BR-light as the measuring light might lead to a biased evaluation because of the interaction, as demonstrated in our recent report [@Murakami_et_al2016PP].
 
-  Such biases can also occur when evaluating the vertical profiles of photosynthetic characteristics of individual leaves of plants grown in a closed canopy.
+  Such biases can also occur when evaluating the vertical profiles of photosynthetic characteristics of individual leaves of plants grown in closed canopy.
   While leaves in the upper layers are acclimated to sunlight, those in the lower layers are acclimated to sunlight that has penetrated through the upper leaves.
-  Due to the higher transmittance for FR light of a leaf, the transmitted light incident on lower leaves contains a relatively greater proportion of FR light (Fig. 4) and is therefore PSI-light.
+  Due to the higher transmittance in the FR waveband of a leaf, the transmitted light incident on lower leaves contains a relatively greater proportion of PFD in the FR waveband (Fig. 4) and is therefore PSI-light.
   Consequently, when measured using BR-light, the *P*~n~ of upper leaves might be overestimated while that of lower leaves might be underestimated.
 
 
 
-# Selecting appropriate SPDs of measuring light for evaluating photosynthetic rates
+# Selecting appropriate relative spectral distributions of measuring light for evaluating photosynthetic rates
 
   Ideally, photosynthetic rates and related indices should be measured under *in situ* conditions.
-  In prospective studies focusing on plant growth after measurements, the measurements should be made under the spectral PFD distribution of light to which the plant will be subjected.
+  In prospective studies focusing on plant growth after measurements, the measurements should be made under the spectral distribution of light to which the plant will be subjected.
   For instance, when evaluating transplants grown under artificial lighting [e.g. @Kozai2007POP], the measurements should be made under sunlight because the plants will be transferred to a greenhouse or an open field and cultivated under sunlight. 
-  However, the measurements under actual sunlight may be less reliable because of the short-term fluctuations and diurnal changes in the spectral distributions [].
-  The use of artificial light sources approximating *in situ* light [e.g. @Fujiwara_et_al2013Proc] is necessary to make reproducible and reliable *in situ* evaluations.
-  In retrospective studies that aim to explain differences among experimental groups, the measurements should be made under the SPDs of light that the plants received during the treatments.
-  For instance, when differences in dry weight between plants grown under white LEDs and those grown under white fluorescent lamps are analyzed and *P*~n~ is used as an explanatory variable, the measurements should be made using the LEDs for the plants grown under white LEDs and using the fluorescent lamps for those grown under white fluorescent lamps.
-  In both prospective and retrospective studies, these simple *in situ* measurements will eliminate the problems caused by the interaction between the growth and the measuring light.
+  However, the measurements under actual sunlight may be less reliable because of the short-term fluctuations and diurnal changes in the spectral distributions.
+  In this case, therefore, the use of artificial light sources, which provide light with relative spectral distributions approximating to that of sunlight [e.g. @Fujiwara_et_al2013Proc], may be necessary to make comparable, reproducible and reliable *in situ* evaluations.
+  In retrospective studies that aim to explain differences in growth brought about by the different growth conditions, the measurements should be made under the spectral distributions of light that the plants received during the treatments.
+  For instance, when differences in dry weight between plants grown under white LEDs and those grown under white fluorescent lamps are analyzed and *P*~n~ is used as an explanatory variable, the measurements should be made using the white LEDs for the plants grown under the LEDs and using the white fluorescent lamps for those grown under the fluorescent lamps.
+  In both prospective and retrospective studies, these simple *in situ* measurements will eliminate the problems caused by the interaction between the growth and the measuring lights.
 
-  On the other hand, in descriptive studies that hardly make assumption about the *in situ* conditions (i.e. fundamental researches), *P*~n~ measurements should be made under several SPDs of light including PSII- and PSI-light.
-  It is better for researchers to report the ‘general’ characteristics of the leaves in these studies.
+  On the other hand, in descriptive studies that hardly make assumption about the *in situ* conditions (i.e. fundamental studies), *P*~n~ measurements should be made under several relative spectral distributions of light including PSII- and PSI-light.
+  It is better for researchers to report the ‘general’ photosynthetic characteristics of the leaves in these studies.
   Therefore, the interaction should be tested so as not to make biased evaluations.
   If there is any interaction, the results should be descriptively reported and should not be generalized.
-  When the measurements are made only under a single of SPD of measuring light because there is no other option, detailed information on the light source (e.g. model number) must be described in the materials and methods section so that the reader knows the SPD.
+  When the measurements are made only under a single spectral distribution of measuring light because there is no other option, detailed information on the light source (e.g. model number) must be described in the materials and methods section so that the reader knows the spectral distribution.
 
 
 
@@ -130,7 +127,7 @@
 
   The *P*~n~ under a relative spectral PFD distribution of measuring light is only one aspect of the photosynthetic characteristics of a leaf.
   Therefore, the obtained results must be discussed in relation to the relative spectral distributions of the growth and measuring lights.
-  Photosynthesis should be evaluated under *in situ* conditions or several spectral distributions of measuring light so that the evaluation is not biased by the interaction between the spectral distributions of the growth and measuring lights.
+  Photosynthesis should be evaluated under *in situ* light or several relative spectral distributions of light so that the evaluation is not biased by the interaction between the spectral distributions of the growth and measuring lights.
   Imitating the various spectral distributions of light incident on the leaf for *in situ* evaluation might be difficult or impossible for technical reasons.
   In addition, measuring the *P*~n~ under several spectral distributions is time-, resource-, and labor-consuming.
   Although these two approaches might not always be used to evaluate leaf *P*~n~, the interaction should always be considered to make circumspect conclusions.
