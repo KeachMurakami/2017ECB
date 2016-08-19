@@ -1,5 +1,5 @@
 ---
-title: "A basis for selecting light spectral distribution for evaluating photosynthetic rates of leaves grown under different light spectral distributions"
+title: "A basis for selecting light spectral distribution for evaluating leaf photosynthetic rates of plants grown under different light spectral distributions"
 author: "Keach Murakami^1\\*^, Ryo Matsuda^1^, Kazuhiro Fujiwara^1^"
 csl: ECB.csl
 bibliography: ~/GitHub/BeeLabR/BibTex/With.bib
@@ -29,9 +29,9 @@ output:
     theme: sandstone
     self_contained: TRUE
     fig_caption: TRUE
-  word_document:
-    toc: FALSE
-    fig_caption: TRUE
+  # word_document:
+  #   toc: FALSE
+  #   fig_caption: TRUE
 ---
 
 ```{r, echo = F, message = F}
@@ -55,9 +55,12 @@ Affiliations: ^1^Graduate School of Agricultural and Life Sciences, The Universi
 
 Address: ^1^Yayoi, Bunkyo, Tokyo, 113--8657, Japan
 
-e-mail: keach.murakami@gmail.com  
+Mail: keach.murakami@gmail.com  
 
-**Abstract**
+Running title: the spectral distribution for evaluating leaf photosynthesis
+
+
+**Abstract**  
   Relative spectral distributions of light during growth and for measurements do not only directly affect the net photosynthetic rate (*P*~n~), but also indirectly affect it through the interaction between the distributions of the growth and the measuring light.
   This paper summarizes a plausible mechanism of the interaction, some situations in which the interaction should be considered, and recommendations for selecting appropriate measuring light to evaluate photosynthesis.
   In agricultural and horticultural studies, the *P*~n~ should be measured under *in situ* conditions, depending on the purpose of the study.
@@ -66,9 +69,8 @@ e-mail: keach.murakami@gmail.com
   The *P*~n~ under a single spectral distribution of measuring light is only one aspect of the photosynthetic characteristics of a leaf.
   The obtained results must be discussed in relation to the spectral distribution of measuring light so as not to make biased evaluations.
 
-------
 
-**Abbreviations**
+**Abbreviations**  
 BR-light: blue and red LED light,
 Chl: chlorophyll,
 ETR: electron transport rate,
@@ -80,7 +82,10 @@ PPFD: photosynthetic photon flux density,
 PSI: photosystem I,
 PSII: photosystem II,
 
-------
+**Keywords**  
+Excitation energy distribution, Light quality, Photosystems, PSII, PSI
+
+
 
 
 ```{r, child = "./Main.Rmd"}

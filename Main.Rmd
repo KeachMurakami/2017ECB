@@ -6,21 +6,21 @@
   In agricultural and horticultural researches, the effectiveness of treatments is sometimes discussed based on the measured photosynthetic rates and calculated indices.
 
   A number of researches have reported that the relative spectral photon flux density (PFD) distribution of light used for measurement (i.e. measuring light or actinic light) affects leaf net photosynthetic rates (*P*~n~) [e.g. @McCree1972AM; @Inada1976PCP].
-  To eliminate this direct effect from the comparison, *P*~n~ is usually measured under a common spectral distribution of measuring light irrespective of leaf growth conditions in agricultural and horticultural studies
-  One of the most widely-used measuring lights is a mixture of blue and red light (BR-light) provided by light-emitting diodes (LEDs) installed in commercial photosynthesis analysis systems (e.g. LI6400XT, LI-COR Inc., Lincoln, NE; GFS-3000, Heinz Walz GmbH, Effeltrich, Germany).
+  To eliminate this direct effect from the comparison, *P*~n~ is usually measured under a common spectral distribution of measuring light irrespective of growth conditions in agricultural and horticultural studies.
+  One of the most widely-used measuring lights is a mixture of blue and red light (BR-light) provided by light-emitting diodes (LEDs) installed in commercial photosynthesis analysis systems (e.g. LI6400XT, LI-COR Inc., Lincoln, NE; GFS-3000, US, Heinz Walz GmbH, Effeltrich, Germany).
   The use of artificial light sources enables precise control of the spectral distribution of measuring light on the leaf, and therefore, ensures reproducibility and reliability among experiments.
 
   @Walters2005JXB noted that photosynthetic rates measured with a relative spectral distribution of light different from that of the growth light do not necessarily reflect the functioning of photosynthesis under the actual growth conditions.
   Indeed, we have demonstrated this problem in *P*~n~ measurements in our recent experiment [@Murakami_et_al2016PP].
   In that experiment, cucumber seedlings were grown under white LED without and with supplemental far-red (FR) LED light (W and WFR, respectively), and the *P*~n~ of the leaves was subsequently compared under BR-light and under light with a relative spectral distribution approximating to that of sunlight (‘artificial’ sunlight).
   The *P*~n~ of W-grown-leaves was greater than that of WFR-grown-leaves under BR-light, while the rates were comparable under the artificial sunlight [@Murakami_et_al2016PP].
-  Based on the results obtained from measurement under BR-light, the prospective leaf photosynthetic rate of WFR-grown-plants may be evaluated to be smaller than that of W-grown-plants, despite the comparable rates under sunlight.
+  Based on the results obtained from measurement under BR-light, the prospective leaf photosynthetic rate (i.e. leaf photosynthetic rates after the measurements) of WFR-grown-plants may be evaluated to be smaller than that of W-grown-plants, despite the comparable rates under sunlight.
 
   The effect of the relative spectral distribution of growth light on *P*~n~ depends on the distribution of measuring light.
   In other words, the interaction between the relative spectral distributions of growth light and measuring light affect the *P*~n~ of a leaf.
   In this short article, we describe a plausible mechanism for this interaction, based on the excitation energy distribution balance between the photosystems.
   We then suggest situations in which the interaction should be particularly considered.
-  We also discuss good practice for selecting measuring light with appropriate relative spectral distributions for *P*~n~ measurements.
+  We also discuss good practice for selecting measuring light with appropriate relative spectral distributions for *P*~n~ evaluations.
   Several mechanisms other than the excitation balance, such as stomatal responses [@Shimazaki_et_al2007AnnRev], photoinactivation [@Zavafer_et_al2015JPP], and vertical PFD profile within a leaf [@Terashima_et_al2009PCP] affect photosynthesis via the relative spectral distribution of measuring light.
   Although these subjects are not discussed in this article, the cited articles are available for these topics.
 
@@ -34,12 +34,12 @@
   The excitation energy derived from absorbed photons and transferred to the reaction centers of the photosystems is consumed by photochemical reactions.
   The serial photochemical reactions at PSII and PSI enable electron transfer from water to NADP^+^, via the so-called Z scheme.
   
-  The two photosystems---PSII and PSI---represent different spectral distributions of light absorption due to their different compositions of binding pigments, mainly chl *a* and chl *b*.
-  Within the chlorophyll (chl) absorption band (approximately 350--750 nm), longer wavelengths of light (> 680--690 nm) are estimated to be preferentially absorbed by PSI, and PSI is drastically overexcited compared with PSII [Fig. 1; @Evans_Anderson1987BBA; @Hogewoning_et_al2012PC; @Wientjes_et_al2013BBA; @Laisk_et_al2014BBA].
+  The two photosystems---PSII and PSI---represent different spectral distributions of light absorption due to their different compositions of binding pigments, mainly chloropyhll (chl) *a* and chl *b*.
+  Within the chl absorption band (approximately 350--750 nm), longer wavelengths of light (> 680--690 nm) are estimated to be preferentially absorbed by PSI, and PSI is drastically overexcited compared with PSII [Fig. 1; @Evans_Anderson1987BBA; @Hogewoning_et_al2012PC; @Wientjes_et_al2013BBA; @Laisk_et_al2014BBA].
   This is because only chl *a* can absorb longer wavelengths of light, and PSI contains more chl *a* than does PSII.
   In contrast, monochromatic light at shorter wavelengths (< 680--690 nm) is estimated to be preferentially absorbed by PSII, or evenly absorbed by both photosystems [Fig. 1; @Evans_Anderson1987BBA; @Hogewoning_et_al2012PC; @Wientjes_et_al2013BBA; @Laisk_et_al2014BBA].
   These wavelength dependencies of the excitation balance between PSII and PSI determine the excitation energy distribution (EED)---the fraction of the excitation energy distributed to PSII (or PSI) to that absorbed by the leaf or by the photosystems---under a given relative spectral distribution of light.
-  The idea of EED is adopted in the widely-accepted equations for ETR estimation originated from @Genty_et_al1989BBA,  
+  The idea of EED is adopted in the following equations for ETR estimation originated from @Genty_et_al1989BBA,  
   ETR = PFD × α~leaf~ × β~leaf~ × *Y*~II~,  
   ETR = PFD × α~PS~ × β~PS~ × *Y*~II~,  
   where α~leaf~ (frequently assumed to be 0.84) and α~PS~ are absorptances of the leaf and the photosystems, β~leaf~ (frequently assumed to be 0.50) and β~PS~ are EEDs to PSII on the bases of the absorptions by the leaf and by the photosystems, and *Y*~II~ (also known as Φ~PSII~, *F*~q~'/*F*~m~', or Δ*F*/*F*~m~') is a photochemical quantum yield of PSII obtained from chl fluorescence measurement.
@@ -47,19 +47,19 @@
   Lights with different spectral distributions are sometimes categorized into PSII- and PSI-light based on the β~PS~ approximated from their relative spectral distributions and the spectrum of excitation balance (i.e. Fig. 1)---mainly judged by the proportions of PFDs in the FR waveband [e.g. @Chow_et_al1990PNAS; @Melis1991BBA; @Pfannschmidt_et_al2001JBC; @Dietzel_et_al2008FJ; @Pfannschmidt_et_al2009AB; @Dietzel_et_al2011PC; @Hogewoning_et_al2012PC].
 
   Because the photosynthetic electron transport reactions occur in series, the electron transport rate (ETR) is limited by the slowest step (Fig. 2).
-  When there is excess excitation energy at PSII (i.e. under PSII-light), the smaller amount of excitation energy distributed to PSI results in lower potential ETR at PSI than at PSII.
+  When there is excess excitation energy at PSII (i.e. under PSII-light), the smaller amount of excitation energy distributed to PSI results in lower potential ETR at PSI than that at PSII.
   In this case, the smaller potential ETR at PSI limits the bulk ETR and PSII represents a smaller ETR than the potential that by decreasing the photochemical quantum yield (Fig. 2C).
   <!-- This shortage in the EED to PSI limits the bulk ETR so that ETR between PSII and PSI balances. -->
   <!-- In this case, PSII represents a smaller photochemical quantum yield compared to its maximum value. -->
   When PSI absorbs excess excitation energy (i.e. under PSI-light), the excitation energy distributed to PSII limits the ETR and lowers the yield of PSI (Fig. 2B).
-  In both cases, the excess energy is dissipated mainly as heat, thereby leading to a lower photosynthetic quantum yield---ETR per absorbed photons---than that under light with balanced EED for the leaf.
+  In both cases, the excess energy is dissipated mainly as heat, thereby leading to a lower photosynthetic quantum yield---ETR per absorbed photons by the photosystems---than that under light with suitable EED for the leaf.
   Therefore, balancing the EED between PSII and PSI is essential for plants to retain a high photosynthetic quantum yield.
   Prolonged imbalances in the EED are supposed to damage leaves by generating reactive oxygen species, which cause oxidative damage to chloroplast components [for reviews, see @Asada1999AnnRev; @Asada2006PP].
 
   Apparently, the EED at a given relative spectral distribution of light is affected by the composition of the thylakoid components, especially the stoichiometry between PSII and PSI.
-  The stoichiometry appears to adjust to the spectral PFD distribution of the growth light.
+  The stoichiometry appears to adjust to the relative spectral distribution of the growth light.
   When growth light was changed from PSII-light to PSI-light, the relative amount of the reaction center complex of PSII to that of PSI in leaves increases; conversely, when changed from PSI-light to PSII-light, the relative amount decreases [e.g. @Melis1991BBA; @Pfannschmidt_et_al1999Nature].
-  These adjustments in the EED properties help the leaves to maintain a high photosynthetic quantum yield under different growth lights [@Chow_et_al1990PNAS].
+  These adjustments in the EED properties help the leaves to maintain a high photosynthetic quantum yield under growth conditions [@Chow_et_al1990PNAS].
   As a result of these adjustments in the EED properties of a leaf, the spectrum of excitation balance (Fig. 1) differs depending on the relative spectral distribution of the growth light.
   Note that the categories of light, that is, ‘PSII-light’ and ‘PSI-light’, are defined for a given leaf on a relative scale, not an absolute scale.
   For instance, a relative spectral distribution of light that is evenly absorbed by PSII and PSI in PSII-light-grown leaves (i.e. β~PS~ = 0.5; Fig. 2A), can overexcite PSII in PSI-light-grown leaves (i.e. β~PS~ > 0.5; Fig. 2C).
@@ -75,7 +75,7 @@
   Similar trends were observed for the photosynthetic quantum yield of O~2~ evolution [in *Arabidopsis thaliana*; @Walters_Horton1995aPlanta], the photosynthetic quantum yield of CO~2~ uptake [in *Cucumis sativus*; @Hogewoning_et_al2012PC], and *P*~n~ [in *C. sativus*, see also Introduction; @Murakami_et_al2016PP].
 
   These reports suggested that the EED properties of a leaf might be tuned to the PSII/PSI-biased level of growth light.
-  It is expected that a leaf will perform a higher ETR per absorbed photons by the leaf under measuring light with a PSII/PSI-biased level similar to that of the growth light (Fig. 3).
+  It is expected that a leaf will perform a higher ETR per absorbed photons by the photosystems under measuring light with a PSII/PSI-biased level similar to that of the growth light (Fig. 3).
   When leaves grown under different spectral distributions of light are compared and evaluated under measuring light with a specific distribution, therefore, the results will inevitably be biased depending on the selecting of the measuring light.
 
 
@@ -88,7 +88,7 @@
 
   The mechanisms of how EED properties adapt to relative spectral distributions of growth light have not yet been fully elucidated as discussed in @Murakami_et_al2016PP.
   Considering that the photosystem stoichiometry is sensitive to the relative spectral distribution of growth light [e.g. @Walters_Horton1995aPlanta], the interaction should always be taken into account whenever the *P*~n~ and related indices are compared among leaves grown with different relative spectral distributions.
-  Particular attention should be paid to the effects of the interaction on *P*~n~, at least when the measured leaves are expected to represent different EED properties, as described below.
+  Particular attention should be paid to the effects of the interaction on *P*~n~, at least when the evaluated leaves are expected to represent different EED properties, as described below.
   
   Many studies published over the last decade have investigated the effects of the relative spectral distribution of the growth light on plant growth and photosynthesis [e.g. @Matsuda_et_al2004PCP; @Matsuda_et_al2007SSPN; @Matsuda_et_al2008PCP; @Hogewoning_et_al2010aJXB; @Hogewoning_et_al2010bJXB; @Hogewoning_et_al2012PC; @Shibuya_et_al2015BP; @Trouwborst_et_al2016EEB].
   Most light sources used for promoting photosynthetic and growth rates, such as fluorescent lamps, metal halide lamps, high-pressure sodium lamps, and blue, red, and white LEDs, emit light containing little PFD in the FR waveband (i.e. PSII-light; Fig. 4).
@@ -106,16 +106,16 @@
 
 # Selecting appropriate relative spectral distributions of measuring light for evaluating photosynthetic rates
 
-  Ideally, photosynthetic rates and related indices should be measured under *in situ* conditions.
-  In prospective studies focusing on plant growth after measurements, the measurements should be made under the spectral distribution of light to which the plant will be subjected.
+  Ideally, photosynthetic rates and related indices should be evaluated under *in situ* conditions.
+  In prospective studies focusing on plant growth after measurements, the evaluations should be made under the spectral distribution of light to which the plant will be subjected.
   For instance, when evaluating transplants grown under artificial lighting [e.g. @Kozai2007POP], the measurements should be made under sunlight because the plants will be transferred to a greenhouse or an open field and cultivated under sunlight. 
   However, the measurements under actual sunlight may be less reliable because of the short-term fluctuations and diurnal changes in the spectral distributions.
   In this case, therefore, the use of artificial light sources, which provide light with relative spectral distributions approximating to that of sunlight [e.g. @Fujiwara_et_al2013Proc], may be necessary to make comparable, reproducible and reliable *in situ* evaluations.
   In retrospective studies that aim to explain differences in growth brought about by the different growth conditions, the measurements should be made under the spectral distributions of light that the plants received during the treatments.
   For instance, when differences in dry weight between plants grown under white LEDs and those grown under white fluorescent lamps are analyzed and *P*~n~ is used as an explanatory variable, the measurements should be made using the white LEDs for the plants grown under the LEDs and using the white fluorescent lamps for those grown under the fluorescent lamps.
-  In both prospective and retrospective studies, these simple *in situ* measurements will eliminate the problems caused by the interaction between the growth and the measuring lights.
+  In both prospective and retrospective studies, these simple *in situ* evaluations will eliminate the problems caused by the interaction between the growth and the measuring lights.
 
-  On the other hand, in descriptive studies that hardly make assumption about the *in situ* conditions (i.e. fundamental studies), *P*~n~ measurements should be made under several relative spectral distributions of light including PSII- and PSI-light.
+  On the other hand, in descriptive studies that hardly make assumption about the *in situ* conditions (i.e. fundamental studies), *P*~n~ evaluations should be made under several relative spectral distributions of light including PSII- and PSI-light.
   It is better for researchers to report the ‘general’ photosynthetic characteristics of the leaves in these studies.
   Therefore, the interaction should be tested so as not to make biased evaluations.
   If there is any interaction, the results should be descriptively reported and should not be generalized.
@@ -139,226 +139,8 @@
   We thank Dr Sander W. Hogewoning (Plant Lighting B.V., the Netherlands) for providing data of absorbance spectra of photosystems.
   This work was supported by JSPS KAKENHI Grant Number 26·9372.
 
-
-```{r EED, eval = evalFig}
-library(EBImage)
-which_mean <- function(x) x %>% which %>% mean
-Join_by <- function(x, y) join(x, y, by = "wavelength")
-
-  Hoge_PSII <- readImage("~/Dropbox/Publish/2016PgEstimate/Data/Hoge_PSII.png")
-  Hoge_PSI <- readImage("~/Dropbox/Publish/2016PgEstimate/Data/Hoge_PSI.png")
-  
-  Abs_PSII <-
-    (Hoge_PSII[, , 1] < .8 & Hoge_PSII[, , 3] > .8) %>%
-    .@.Data %>%
-    data.frame %>%
-    t %>%
-    aaply(.margins = 2, .fun = which_mean) %>%
-    data.frame(wavelength = seq(400, 800, by = 1), abs = (dim(Hoge_PSII)[2] - .)) %>%
-    select(wavelength, PSII = abs)
-  
-  Abs_PSI <-
-    (Hoge_PSI[, , 1] > .8 & Hoge_PSI[, , 3] < .8) %>%
-    .@.Data %>%
-    data.frame %>%
-    t %>%
-    aaply(.margins = 2, .fun = which_mean) %>%
-    data.frame(wavelength = seq(400, 800, by = 1), abs = (dim(Hoge_PSI)[2] - .)) %>%
-    select(wavelength, PSI = abs)
-  
-Mole_abs <-
-  Reduce(Join_by, list(Abs_PSII, Abs_PSI)) %>%
-  filter(wavelength %% 1 == 0) %>%
-  na.omit
-
-EED_dat <-
-  Mole_abs %>%
-  transmute(
-    wavelength,
-    AlltoPSII = PSII / (1.5 * PSI + PSII)
-  )
-
-EEDs <-
-  EED_dat %>%
-    mutate(All2_for = c(tail(EED_dat$AlltoPSII, -1), 0),
-           All2_back = c(0, head(EED_dat$AlltoPSII, -1)),
-           AlltoPSII = (AlltoPSII + All2_for + All2_back) / 3) %>% # get moving average
-    filter(wavelength > 400)  %>%
-    replace_na(list(AlltoPSII = 0)) %>%
-    ggplot(aes(x = wavelength, y = AlltoPSII)) +
-    theme_thesis(base_family = "serif", base_size = base_size) +
-    geom_hline(yintercept = 0.5, col = "grey50", linetype = 3) +
-    gg_x(c(380, 770)) +
-    # geom_ribbon(aes(ymin = AlltoPSII_max, ymax = AlltoPSII_min), col = "grey50") +
-    geom_line() +
-    scale_y_continuous(labels = c("0    ", "0.25", "0.50", "0.75", "1.00"),
-                       breaks = c(0, 0.25, 0.5, 0.75, 1),
-                       limits = c(-.005, 1.005),
-                       expand = c(0, 0)) +
-    xlab("Wavelength [nm]") + ylab("Fraction of the excitation energy distributed to PSII")
-```
-
-```{r InteractionPict, eval = evalFig}
-
-X_div <- 101
-X_range <- seq(0, 1, length.out = X_div)
-x_breaks <- c(0.2, 0.4, 0.65)
-
-
-InteractionDat <-
-  data_frame(X = rep(X_range, times = 2),
-           ETR = c(sqrt(dbeta(X_range, 4.5, 3.5)) * 1.1, sqrt(dbeta(X_range, 3, 5))),
-           Trtm = rep(c("PSII-leaves", "PSI-leaves"), each = X_div))
-
-InteractionLabel <-
-  InteractionDat %>%
-  group_by(Trtm) %>%
-  summarise(ETR = max(ETR)) %>%
-  left_join(., InteractionDat, by = c("Trtm", "ETR"))
-
-InteractionPoint <-
-  InteractionDat %>%
-  filter(X %in% x_breaks)
-  
-InteractionText <-
-  InteractionDat %>%
-  filter(X %in% x_breaks) %>%
-  mutate(labels = c("far-red LED light", "Sunlight", "blue + red LED light", rep("", length(x_breaks)))) %>%
-  mutate(ETR = c(0.1, 0.1, 0.1, numeric(length(x_breaks))))
-
-InteractionView <-
-  InteractionDat %>%
-  ggplot(aes(X, ETR, linetype = Trtm, fill = Trtm, group = Trtm)) +
-  theme_thesis(base_family = "serif", base_size = base_size) +
-  geom_vline(aes(xintercept = x_breaks[1]), linetype = 3, size = .75, col = "grey") +
-  geom_vline(aes(xintercept = x_breaks[2]), linetype = 3, size = .75, col = "grey") +
-  geom_vline(aes(xintercept = x_breaks[3]), linetype = 3, size = .75, col = "grey") +
-  geom_line() +
-  geom_point(data = InteractionPoint, col = "black", size = 3, shape = 21) +
-  geom_text(data = InteractionLabel, aes(x = X, y = ETR, label = Trtm), vjust = -1, family = "serif", size = Annotate_size) +
-  geom_text(data = InteractionText, aes(label = labels), vjust = 1, family = "serif", size = Annotate_size) +
-  scale_fill_manual(values = c("white", "black")) +
-  scale_linetype_manual(values = c(2, 1)) +
-  scale_x_continuous(breaks = c(0.07, 0.92),
-                     limits = c(0.05, 0.95),
-                     labels = c("PSI-biased", "PSII-biased")) +
-  scale_y_continuous(breaks = NULL,
-                     limits = c(-0.05, 2.05)) +
-  xlab("PSII/PSI-biased level of measuring light") +
-  ylab("Relative electron transport rate")
-  
-```
-
-```{r Spectra, eval = evalFig}
-
-# set integrate ranges
-PFD_integrate_min <- 350
-PFD_integrate_max <- 750
-
-IntegratePFD <- 100
-
-panel_names <- c("(a)", "(b)", "(c)")
-
-FL_Ocean_raw <-
-  fread("~/Dropbox/materials/SPD_FL.csv") %>%
-  transmute(wavelength = `Wavelength[nm]`, value = FL) %>%
-  na.omit
-
-FL_Ocean_PFD <-
-  smooth.spline(FL_Ocean_raw$wavelength, FL_Ocean_raw$value) %>%
-    predict(., seq(PFD_integrate_min, PFD_integrate_max)) %>%
-    .$y %>%
-  sum
-
-FL_Ocean <-
-  FL_Ocean_raw %>%
-  mutate(value = value * 100 / FL_Ocean_PFD, variable = "FL")
-
-HPS_Ocean_raw <-
-  fread("~/Dropbox/materials/SPD_HPS.txt", skip = 50, nrow = 2000) %>%
-  rename(wavelength = V1, value = V2)
-
-HPS_Ocean_PFD <-
-  smooth.spline(HPS_Ocean_raw$wavelength, HPS_Ocean_raw$value) %>%
-    predict(., seq(PFD_integrate_min, PFD_integrate_max)) %>%
-    .$y %>%
-  sum
-
-HPS_Ocean <-
-  HPS_Ocean_raw %>%
-  mutate(value = value * 100 / HPS_Ocean_PFD, variable = "HPS")
-
-MH_Ocean_raw <-
-  fread("~/Dropbox/materials/SPD_MH.txt", skip = 50, nrow = 2000) %>%
-  rename(wavelength = V1, value = V2)
-
-MH_Ocean_PFD <-
-  smooth.spline(MH_Ocean_raw$wavelength, MH_Ocean_raw$value) %>%
-    predict(., seq(PFD_integrate_min, PFD_integrate_max)) %>%
-    .$y %>%
-  sum
-
-MH_Ocean <-
-  MH_Ocean_raw %>%
-  mutate(value = value * 100 / MH_Ocean_PFD, variable = "MH")
-
-OceanSPDs <-
-  bind_rows(FL_Ocean, HPS_Ocean, MH_Ocean) %>%
-  mutate(panel = panel_names[1])
-
-Absorptances <-
-  fread("~/Dropbox/materials/SpectrumCucumber.csv") %>%
-  filter(Trtm %in% c("W", "WFR", "FL")) %>%
-  mutate(wavelength = as.numeric(wavelength)) %>%
-  filter(variable == "absorption", Trtm == "W")
-
-# Sun: JIS C8904-3
-Sun <-
-  fread("~/Dropbox/materials/Sunlight_JIS.csv") %>%
-  setnames(c("wavelength", "Sunlight")) %>%
-  left_join(., Absorptances, by = "wavelength") %>%
-  transmute(wavelength, Sun = Sunlight, Shade = Sunlight * (100 - ave), Absorptance = ave)
-
-LEDs <-
-  fread("~/Dropbox/materials/SPD_FL.csv") %>%
-  transmute(wavelength = `Wavelength[nm]`, W, FR, B = B_HL, R = R_SR) %>%
-  SPDnorm(from = 350, to = 750, integratedPFD = IntegratePFD) %>%
-  gather(variable, value, -wavelength) %>%
-  mutate(panel = panel_names[2]) %>%
-  na.omit
-
-SPD_labels <-
-  data_frame(variable = c("FL", "MH", "HPS", "B", "R", "FR", "W", "Sun", "Shade"),
-             wavelength = c(435, 520, 570, 448, 660, 735, 460, 450, 700),
-             value = c(2.2, .6, 3, 4, 4.2, 3.8, 1.3, 0.6, 2),
-             label = c("FL", "MH", "HPS", "B", "R", "FR", "W", "Sunlight", "Leaf-transmitted sunlight"),
-             panel = rep(panel_names,  c(3, 4, 2)))
-
-SPD_panel <-
-  data_frame(variable = "FL",
-           wavelength = 400, value = 4,
-           label = letters[1:3],
-           panel = rep(panel_names))
-
-SPDs <-
-  Sun %>%
-  SPDnorm(from = 350, to = 750, integratedPFD = IntegratePFD) %>%
-  select(-Absorptance) %>%
-  gather(variable, value, -wavelength) %>%
-  mutate(panel = panel_names[3]) %>%
-  bind_rows(., OceanSPDs, LEDs) %>%
-  filter(between(wavelength, 380, 820)) %>%
-  ggplot(aes(x = wavelength, y = value, group = variable, col = variable, linetype = variable)) +
-  theme_thesis(base_family = "serif", base_size = base_size) +
-  geom_rect(aes(xmin = 700, xmax = 750, ymin = 0, ymax = +Inf), fill = "grey90", col = NA) +
-  geom_line() +
-  geom_text(data = SPD_labels, aes(x = wavelength, y = value, label = label), family = "serif", size = Annotate_size) +
-  geom_text(data = SPD_panel, col = "black", aes(label = panel), family = "serif", size = Annotate_size * .8) +
-  scale_linetype_manual(values = c(1, 1, 3, 2, 4, 2, 2, 1, 4)) +
-  scale_color_manual(values = c("blue", "black", "darkred", "orange", "purple", "red", "grey25", "black", "black")) +
-  facet_grid(panel ~ .) +
-  gg_xy(c(380, 820, -.01, 4.5)) +
-  xlab("Wavelength [nm]") + ylab(u_SPFD("Spectral photon flux density"))
+```{r, eval = evalFig}
+source("./FigMake.R")
 ```
 
 ```{r, eval = evalFig, html.cap = CapEED}
