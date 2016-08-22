@@ -41,7 +41,7 @@ EED_dat <-
   Mole_abs %>%
   transmute(
     wavelength,
-    AlltoPSII = PSII / (1.2* PSI + PSII)
+    AlltoPSII = PSII / (1.5* PSI + PSII)
   )
 
 EEDs <-
@@ -215,14 +215,33 @@ SPDs <-
   mutate(panel = panel_names[3]) %>%
   bind_rows(., OceanSPDs, LEDs) %>%
   filter(between(wavelength, 380, 820)) %>%
-  ggplot(aes(x = wavelength, y = value, group = variable, col = variable, linetype = variable)) +
+  ggplot(aes(x = wavelength, y = value, group = variable, col = variable)) +
   theme_thesis(base_family = "serif", base_size = base_size) +
   geom_rect(aes(xmin = 700, xmax = 750, ymin = 0, ymax = +Inf), fill = "grey90", col = NA) +
   geom_line() +
   geom_text(data = SPD_labels, aes(x = wavelength, y = value, label = label), family = "serif", size = Annotate_size) +
   geom_text(data = SPD_panel, col = "black", aes(label = panel), family = "serif", size = Annotate_size * .8) +
-  scale_linetype_manual(values = c(1, 1, 3, 2, 4, 2, 2, 1, 4)) +
-  scale_color_manual(values = c("blue", "black", "darkred", "orange", "purple", "red", "grey25", "black", "black")) +
+  scale_color_manual(values = c("blue", "black", "darkred", "orange", "purple", "red", "grey60", "black", "black")) +
+  facet_grid(panel ~ .) +
+  gg_xy(c(380, 820, -.01, 4.5)) +
+  xlab("Wavelength [nm]") + ylab(u_SPFD("Spectral photon flux density"))
+
+
+SPDs_grey <-
+  Sun %>%
+  SPDnorm(from = 350, to = 750, integratedPFD = IntegratePFD) %>%
+  select(-Absorptance) %>%
+  gather(variable, value, -wavelength) %>%
+  mutate(panel = panel_names[3]) %>%
+  bind_rows(., OceanSPDs, LEDs) %>%
+  filter(between(wavelength, 380, 820)) %>%
+  ggplot(aes(x = wavelength, y = value, group = variable, linetype = variable)) +
+  theme_thesis(base_family = "serif", base_size = base_size) +
+  geom_rect(aes(xmin = 700, xmax = 750, ymin = 0, ymax = +Inf), fill = "grey90", col = NA) +
+  geom_line() +
+  geom_text(data = SPD_labels, aes(x = wavelength, y = value, label = label), family = "serif", size = Annotate_size) +
+  geom_text(data = SPD_panel, col = "black", aes(label = panel), family = "serif", size = Annotate_size * .8) +
+  scale_linetype_manual(values = c(1, 1, 1, 2, 3, 1, 2, 1, 1)) +
   facet_grid(panel ~ .) +
   gg_xy(c(380, 820, -.01, 4.5)) +
   xlab("Wavelength [nm]") + ylab(u_SPFD("Spectral photon flux density"))

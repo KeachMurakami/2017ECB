@@ -21,8 +21,6 @@ output:
 #   pdf_document:
 #     latex_engine: xelatex
 #     fig_caption: TRUE
-# fontsize: 20pt
-# geometry: margin=1.2in
   html_document:
     toc: TRUE
     depth: 3
@@ -31,7 +29,7 @@ output:
     fig_caption: TRUE
   # word_document:
   #   toc: FALSE
-  #   fig_caption: TRUE
+    # fig_caption: TRUE
 ---
 
 ```{r, echo = F, message = F}
@@ -61,7 +59,7 @@ Running title: the spectral distribution for evaluating leaf photosynthesis
 
 
 **Abstract**  
-  Relative spectral distributions of light during growth and for measurements do not only directly affect the net photosynthetic rate (*P*~n~), but also indirectly affect it through the interaction between the distributions of the growth and the measuring light.
+  Relative spectral distributions of light during growth and for measurements do not only directly affect the net photosynthetic rate (*P*~n~), but also indirectly affect it through the interaction between the distributions of the lights.
   This paper summarizes a plausible mechanism of the interaction, some situations in which the interaction should be considered, and recommendations for selecting appropriate measuring light to evaluate photosynthesis.
   In agricultural and horticultural studies, the *P*~n~ should be measured under *in situ* conditions, depending on the purpose of the study.
   For prospective studies focusing on the evaluation of plant growth after measurements, *P*~n~ should be measured under the spectral distribution of light to which the plant will be subjected.
