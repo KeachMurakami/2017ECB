@@ -49,8 +49,6 @@
   Because the photosynthetic electron transport reactions occur in series, the electron transport rate (ETR) is limited by the slowest step (Fig. 2).
   When there is excess excitation energy at PSII (i.e. under PSII-light), the smaller amount of excitation energy distributed to PSI results in lower potential ETR at PSI than that at PSII.
   In this case, the smaller potential ETR at PSI limits the bulk ETR and PSII represents a smaller ETR than the potential by decreasing the photochemical quantum yield (Fig. 2C).
-  <!-- This shortage in the EED to PSI limits the bulk ETR so that ETR between PSII and PSI balances. -->
-  <!-- In this case, PSII represents a smaller photochemical quantum yield compared to its maximum value. -->
   When PSI absorbs excess excitation energy (i.e. under PSI-light), the excitation energy distributed to PSII limits the ETR and lowers the yield of PSI (Fig. 2B).
   In both cases, the excess energy is dissipated mainly as heat, thereby leading to a lower photosynthetic quantum yield---ETR per absorbed photons by the photosystems---than that under light with suitable EED for the leaf.
   Therefore, balancing the EED between PSII and PSI is essential for plants to retain a high photosynthetic quantum yield.
@@ -132,12 +130,6 @@
   In addition, measuring the *P*~n~ under several spectral distributions is time-, resource-, and labor-consuming.
   Although these two approaches might not always be used to evaluate leaf *P*~n~, the interaction should always be considered to make circumspect conclusions.
 
-
-
-**Acknowledgements**
-
-  We thank Dr Sander W. Hogewoning (Plant Lighting B.V., the Netherlands) for providing data of absorbance spectra of photosystems.
-  This work was supported by JSPS KAKENHI Grant Number 26·9372.
 
 ```{r, eval = evalFig}
 source("./FigMake.R")
