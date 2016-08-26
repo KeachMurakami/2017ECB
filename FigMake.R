@@ -1,73 +1,3 @@
-#-------------- EED balance spectrum
-
-if (1 == 1){
-library(EBImage)
-which_mean <- function(x) x %>% which %>% mean
-Join_by <- function(x, y) join(x, y, by = "wavelength")
-
-Hoge_PSII <- readImage("~/Dropbox/Publish/2016PgEstimate/Data/Hoge_PSII.png")
-Hoge_PSI <- readImage("~/Dropbox/Publish/2016PgEstimate/Data/Hoge_PSI.png")
-
-Abs_PSII <-
-  (Hoge_PSII[, , 1] < .8 & Hoge_PSII[, , 3] > .8) %>%
-  .@.Data %>%
-  data.frame %>%
-  t %>%
-  aaply(.margins = 2, .fun = which_mean) %>%
-  data.frame(wavelength = seq(400, 800, by = 1), abs = (dim(Hoge_PSII)[2] - .)) %>%
-  select(wavelength, PSII = abs)
-
-Abs_PSI <-
-  (Hoge_PSI[, , 1] > .8 & Hoge_PSI[, , 3] < .8) %>%
-  .@.Data %>%
-  data.frame %>%
-  t %>%
-  aaply(.margins = 2, .fun = which_mean) %>%
-  data.frame(wavelength = seq(400, 800, by = 1), abs = (dim(Hoge_PSI)[2] - .)) %>%
-  select(wavelength, PSI = abs)
-
-Mole_abs <-
-  Reduce(Join_by, list(Abs_PSII, Abs_PSI)) %>%
-  filter(wavelength %% 1 == 0) %>%
-  na.omit
-}
-
-# Mole_abs <-
-#   xlsx::read.xlsx("~/Dropbox/materials/Hogewoning_et_al.2012_Data.xlsx", sheetIndex = 2, startRow = 2) %>%
-#   select(wavelength = 1, PSII = 2, PSI = 4) %>%
-#   arrange(wavelength)
-#   
-EED_dat <-
-  Mole_abs %>%
-  transmute(
-    wavelength,
-    AlltoPSII = PSII / (1.5* PSI + PSII)
-  )
-
-EEDs <-
-  EED_dat %>%
-  mutate(All2_for = c(tail(EED_dat$AlltoPSII, -1), 0),
-         All2_back = c(0, head(EED_dat$AlltoPSII, -1)),
-         AlltoPSII = (AlltoPSII + All2_for + All2_back) / 3) %>% # get moving average
-  filter(wavelength > 400)  %>%
-  replace_na(list(AlltoPSII = 0)) %>%
-  ggplot(aes(x = wavelength, y = AlltoPSII)) +
-  theme_thesis(base_family = "serif", base_size = base_size) +
-  geom_hline(yintercept = 0.5, col = "grey50", linetype = 3) +
-  gg_x(c(380, 770)) +
-  # geom_ribbon(aes(ymin = AlltoPSII_max, ymax = AlltoPSII_min), col = "grey50") +
-  geom_line() +
-  scale_y_continuous(labels = c("0    ", "0.25", "0.50", "0.75", "1.00"),
-                     breaks = c(0, 0.25, 0.5, 0.75, 1),
-                     limits = c(-.001, 1.001),
-                     expand = c(0, 0)) +
-  xlab("Wavelength [nm]") + ylab("Fraction of the excitation energy distributed to PSII")
-
-
-
-
-
-
 #----------------------- two curves plot
 X_div <- 101
 X_range <- seq(0, 1, length.out = X_div)
@@ -245,3 +175,51 @@ SPDs_grey <-
   facet_grid(panel ~ .) +
   gg_xy(c(380, 820, -.01, 4.5)) +
   xlab("Wavelength [nm]") + ylab(u_SPFD("Spectral photon flux density"))
+
+
+#-------------- EED balance spectrum
+
+Mole_abs <-
+  xlsx::read.xlsx("~/Dropbox/materials/Hogewoning_et_al.2012_Data.xlsx", sheetIndex = 3, startRow = 1) %>%
+  select(wavelength = 1, PSII = 4, PSI = 3) %>%
+  filter(wavelength %% 1 == 0) %>%
+  arrange(wavelength)
+
+E2_E1 <-
+  LEDs %>%
+  filter(variable == "R") %>%
+  left_join(., Absorptances, by = "wavelength") %>%
+  transmute(wavelength, value = value * ave / 100) %>%
+  left_join(., Mole_abs, by = "wavelength") %>%
+  na.omit %>%
+  transmute(E2 = value * PSII, E1 = value * PSI) %>%
+  colwise(sum)()
+
+AmpFactor <- E2_E1[, 1] / (55/45 * E2_E1[, 2])
+
+EED_dat <-
+  Mole_abs %>%
+  transmute(
+    wavelength,
+    AlltoPSII = PSII / (AmpFactor * PSI + PSII)
+  )
+
+
+EEDs <-
+  EED_dat %>%
+  mutate(All2_for = c(tail(EED_dat$AlltoPSII, -1), 0),
+         All2_back = c(0, head(EED_dat$AlltoPSII, -1)),
+         AlltoPSII = (AlltoPSII + All2_for + All2_back) / 3) %>% # get moving average
+  filter(between(wavelength, 380, 730))  %>%
+  replace_na(list(AlltoPSII = 0)) %>%
+  ggplot(aes(x = wavelength, y = AlltoPSII)) +
+  theme_thesis(base_family = "serif", base_size = base_size) +
+  geom_hline(yintercept = 0.5, col = "grey50", linetype = 3) +
+  gg_x(c(380, 770)) +
+  # geom_ribbon(aes(ymin = AlltoPSII_max, ymax = AlltoPSII_min), col = "grey50") +
+  geom_line() +
+  scale_y_continuous(labels = c("0    ", "0.25", "0.50", "0.75", "1.00"),
+                     breaks = c(0, 0.25, 0.5, 0.75, 1),
+                     limits = c(-.001, 1.001),
+                     expand = c(0, 0)) +
+  xlab("Wavelength [nm]") + ylab("Fraction of the excitation energy distributed to PSII")

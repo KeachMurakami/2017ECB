@@ -21,15 +21,15 @@ output:
 #   pdf_document:
 #     latex_engine: xelatex
 #     fig_caption: TRUE
-  html_document:
-    toc: TRUE
-    depth: 3
-    theme: sandstone
-    self_contained: TRUE
-    fig_caption: TRUE
-  # word_document:
-  #   toc: FALSE
-    # fig_caption: TRUE
+  # html_document:
+  #   toc: TRUE
+  #   depth: 3
+  #   theme: sandstone
+  #   self_contained: TRUE
+  #   fig_caption: TRUE
+  word_document:
+    toc: FALSE
+  fig_caption: TRUE
 ---
 
 ```{r, echo = F, message = F}
@@ -84,15 +84,13 @@ PSII: photosystem II,
 Excitation energy distribution, Light quality, Photosystems, PSII, PSI
 
 
-
-
 ```{r, child = "./Main.Rmd"}
 ```
 
 
 **Acknowledgements**
 
-  We thank Dr Sander W. Hogewoning (Plant Lighting B.V., The Netherlands) and Dr. Emilie Wientjes (Wageningen University, The Netherlands) for providing data of absorbance spectra of photosystems.
+  We thank Dr. Sander W. Hogewoning (Plant Lighting B.V., The Netherlands) and Dr. Emilie Wientjes (Wageningen University, The Netherlands) for providing data of absorbance spectra of photosystems.
   This work was supported by JSPS KAKENHI Grant Number 26·9372.
 
 # References
