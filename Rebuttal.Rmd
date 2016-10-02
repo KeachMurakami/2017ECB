@@ -1,0 +1,148 @@
+---
+header-includes:
+  - \setmainfont{Times New Roman}
+  - \usepackage{zxjatype} # 日本語を使うためのパッケージ
+  - \setjamainfont{Hiragino Kaku Gothic Pro} # 日本語フォントの指定
+  - \usepackage{lscape} # 図を回転するためのパッケージ
+  - \newcommand{\blandscape}{\begin{landscape}} # 図回転用のbegin command
+  - \newcommand{\elandscape}{\end{landscape}} # 図回転用のend command
+  - \usepackage{setspace} # 行間の調節ためのパッケージ
+  - \newcommand{\bdoublespace}{\begin{spacing}{1.5}} # 行間を広げるbegin command
+  - \newcommand{\edoublespace}{\end{spacing}{}} # 行間を広げるbegin command
+
+
+output:
+  pdf_document:
+    latex_engine: xelatex
+---
+
+\bdoublespace
+
+安武 大輔 先生
+
+  迅速な編集対応をありがとうございます。
+  査読者のおふたりの速やかな対応にも感謝いたします。
+  以下に査読者のコメントに対する対応を記載いたします。
+  原稿中の変更箇所は赤文字で示しております。
+  ご確認くださるよう、よろしくお願いいたします。
+
+村上 貴一
+
+------
+
+[Editor's Comments]
+
+指摘事項は多いですが、できる範囲の対応で結構ですので、
+論文をより良いものにするために活用して下さい。
+
+[Reviewer(s)' Comments]
+Reviewer: 1
+
+#### 小さな変更
+
+  投稿時にはIn pressだった論文が出版され、掲載巻号・ページが確定したため、修正しました (line 315)。
+
+#### 査読者#1への返答
+
+Comments to the Author  
+審査の言語は英語を希望されていたが、本査読者は日本人であり、審査の速さや誤解などを招かぬよう日本語で記述させていただいた。ご理解いただけると幸いである。  
+本論文は、異なる光スペクトルで育てられた植物の光合成速度を測る場合の光源のスペクトル選定についての注意喚起を促している。とりわけ、単色光に赤外光を含むか含まないかの実験処理区を設定した場合には、葉の中でPSIIとPSIに関連するタンパク質などの組成が変化している可能性があるため、PSIIに吸収されやすい光で光合成を測定するか、あるいはPSIに吸収されやすい光で光合成を測定するかで得られる測定結果（大小関係）が異なってしまうことを理論的に説明している。関連する文献などよく読みこまれており、説明も分かりやすいと感じる。光合成と光質を扱う研究者への啓発論文となっており、興味深い。本誌への掲載に値すると思うが、その前に気になる点を挙げる。可能な限りそれらに応えてほしいと思う次第である。
+
+１．著者らの以前の実験で、キュウリ苗を白色LEDで育成するときにFRを入れるか入れないかの処理区が設定され、それらの光合成能力を評価するために赤青LEDを光源としてLI-6400でガス交換速度が測られた。その後、疑似太陽光で測定が繰り返され、LEDで認められた光合成の大小関係が疑似太陽光ではその差がなくなっていると述べられている。このとき、測定値は何％ずれていたのか、記述する必要があると感じる。たとえば、処理区間におけるLEDで測定された光合成速度の差が５％なのか２０％以上あるのか、その程度によって印象が異なるからである。Fig3の曲線ではその差を随分と増幅したように描かれているが、基本的には数値が入っていない。仮に５％ほどしか差がないと考える。それが疑似太陽光でほぼ互角の光合成速度となったとする。多くの場合、その程度であれば、もともと栽培時の光質処理によって光合成速度は変わらないと、問題なく評価するであろう。しかし、それが２０％や３０％にもなるのであれば、著者らの意見に納得するであろう。  
+ちなみに、成長と合わせて考える場合、葉面積あたりの正味光合成速度で成長の差を議論できないのは多くの場合でありえる。（作物系の雑誌では国内外を問わず問題視されてきた過去がある。）成長には葉の展開、角度などの形態形成も直接的に影響を与えるからである。FRはダイレクトに細胞伸長を誘導する光であることも考慮に入れる必要があるだろう。そのため、測定波長による光合成速度の測定誤差はどの程度となるのか、その点は重要でないかと思われる。なお、著者らは論文としてアクセプトされているようだが、本誌を読むだけでもそのことが分かるように書かれている必要がある。
+
+> 試験区間差に関する記述を追加しました (line 75--77)。
+> 引用文献に記載されているため、論文としてアクセプトされていることは明確であると判断します。
+
+２．上記キュウリ苗の実験において、栽培光中の可視光に対してFRは何割ほど入っているのか、また、そのFR割合はPS II/PS Iの量比を変化させているとなぜ判断できるのか、その根拠となる論文を引用する必要あり。本来ならば、著者らのグループもPSII/PSI比を化学的に示す必要がある。
+
+> FRの割合に関する記述を追加しました (line 72)。
+> PSII/PSI量比が光エネルギー分配の調節に重要であると考えられていますが、その他の機構が関与している可能性があります (追記箇所: line 191--192)。
+> 本論文では、光エネルギー分配の調節の原因をPSII/PSI量比に限定せずに議論しております。
+
+３．本論文がLI-6400のLED測定光源がある意味、使えない光源、と判断している、と受け取られても仕方ない面がある。ライカ社にとっては、気分のいいものではないと思われる。ライカのLED光源は、どのような測定で有効と考えられるか、そのようなケースがあるのであれば簡単でよいので記述したほうが良いと考える（もし、今のテキストに記述されていたなら、査読者の読み取り不足です）。
+
+> 「使えない光源だ」と判断しています。
+> 強いて上げれば、広く標準的に使われているため、他の研究との比較が容易なことです。
+> ただし、多くの研究でこれらの光源を標準的に利用することは系統的なバイアスを強調するため、避けるべきです。
+> したがって、テキストに同光源が有益な条件は記述しておりません。
+
+４．PSIIに偏向した光（例えば、赤、赤青光）で栽培されたとき、測定光がＰＳＩに吸収の高い光であった場合に過誤が生じやすいとのことであるが、大気CO2分圧下で光飽和条件下の場合、電子伝達速度が律速にならない場合も過誤が起きるのだろうか？PSIに吸収されやすい光であっても、それより短い波長の光が十分に強く当たっていれば、PSIIとPSIは飽和し、PSIに偏向された測定光であっても光合成速度（電子伝達速度）のポテンシャルは取れるのではないだろうか？この意見が違っていれば、そのような誤解が生じないようなテキストの工夫をお願いしたい。テキストにあったように光が不足する条件（電子伝達速度が律速）では、生じる可能性大、であることは理解できた。光飽和、弱光などのような場合分けをもっと明確にしてもいいと思う。
+
+> 光飽和 (高PFD・低CO2濃度) 条件での交互作用に関する記述を追加しました (line 179--186)。
+
+細かな指摘  
+１．Abstractをもっと具体的に記述したほうがよい。今回、本文を読む前に読ませていただいたが、抽象的な表現が多いため、最初はアブストラクトだけでは内容がわからなかった。本文を読んだ後では理解できたが。PSIIやPSIの吸収しやすい光で育てられた場合、PSII/PSI比が変わる可能性があるので、測定光がPSIIに偏向した光、PSIに偏向した光、で測定すると、波長に依存して過小評価あるいは過大評価がおきる、などの本文を反映した具体的な記述を入れるべきである。
+
+> 修正しました (line 9--21)。
+
+２．P4L79この記述には引用が必要
+
+> 引用文献を追加し、記述を修正しました (line 104--105, 278-289)。
+
+３．P5L102,104など
+Fig.2中の各パネルとそのキャプションのアルファベットはa～ｄの小文字であるが、本文はA～Ｄの大文字である。統一すべき。
+
+> 修正しました (line 128, 130, 147)。
+
+４．Fig. 2について
+Fig2dに関する記述がないように見受けられた。掲載された図の説明は全て行うべきであるため、加筆すべき（もしあったなら査読者の間違いであり、お詫びする）。  
+分配されるエネルギの大小を黒線の太さで示していると思うのだが、bとcの図について、途中から細い矢印が始まる箇所はここで合っていますか？分配されるまでは太い線、利用できるのは細い線ならば、逆三角形の桶にはいるまでは太い線のまま？桶を通過後細い線になるのでは？とも思った。この図に関しては、テキストかキャプションでさらなる解説が必要と感ずる。例えば、桶の大きさが何を反映しているか、などの記述。
+
+> Fig2b,dを比較した記述を追加しました (line 147--149)。
+> Fig2の矢印を修正し、キャプションに記述を追加しました (line 353--354)。
+
+#### Response to Reviewer #2:
+
+Reviewer: 2
+
+Comments to the Author  
+Gneral comments  
+This paper indicates the importance of the spectral properties of measuring lights for photosynthesis, offering useful information to readers of the journal.
+I basically agree with authors’ argument. However, I think the lack of quantitative data lowers the usefulness of this paper. Readers want to know how much Pn can change with the light spectral distribution under the same intensity conditions to decide which types of light for measurement to be used. If possible, show some values (e.g., xx% increase) as examples.
+“Interaction” is used thoroughly as a key term, please use “interaction” properly (see specific comment #1)
+
+
+ 
+Specific comments  
+1. Line 11 “the interaction between the distributions of the lights”
+What does this phase mean? “interaction” is a process by which two or more things affect each other. Does one light distribution affect another light distribution?
+
+> We rephrased the some “interaction” to “statistical interaction” (line 11, 88).
+> We used the term “interaction” as a statistical term throughout the manuscript.
+
+2. Explain equations (Line 87-88) in more detail. Does upper “ETR” differ from lower “ETR”
+ETR is first used in Line 86 not in 98.
+
+> The two ETRs are the same.
+> We corrected the equation (line 113) and the abbreviated point (line 111).
+
+3. Please clarify the definition of PSI-light and PSII-light?
+Is there neutral light?
+
+> We added description on the definition (line 122--123).
+> “Neutral light” exists depending on the leaf as mentioned in the manuscript (line 144--149).
+
+4. Figure 1 is very informative. Please clarify how to calculate it in detail.
+Is “typical” correct?  Is “example” better?
+
+> We added some description (line 345-346).
+> As similar spectrum was drawn in several earlier papers, the shown spectrum may be “typical”.
+
+5. What is “potential ETR at PSI or PSII” in Line 100?
+
+> The following sentence describes the meaning of “potential” (line 126--128).
+
+6. Is Figure 3 based on the quantitative data? Does the shape or height of the peaks in curves have meanings?  I think this figure is not necessary.
+
+> The figure is conceptual diagram, and not based on the quantative data.
+> For simplicity, the peaks were made to be the same height.
+> Although we agree with you that this figure is not “necessary”, it will help the readers to understand the discussion.
+  
+7. What is “relative spectral distribution”? What is the difference from “spectral distribution”? Why did you use not “relative spectral distribution” but “spectral distribution” in Fig.4?
+
+> We added description on the “relative spectral distribution” (line 59).
+> “Spectral distribution” consists of two factors; PFD---integral of the “spectral distribution”---and light quality---the “relative spectral distribution”.
+> Fig.4 shows the “spectral distributions” because they are more informative than the “relative spectral distributions”.
+
+\edoublespace

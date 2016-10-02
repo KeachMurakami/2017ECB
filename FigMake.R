@@ -1,12 +1,12 @@
 #----------------------- two curves plot
 X_div <- 101
 X_range <- seq(0, 1, length.out = X_div)
-x_breaks <- c(0.2, 0.4, 0.65)
+x_breaks <- c(0.2, 0.48, 0.75)
 
 
 InteractionDat <-
   data_frame(X = rep(X_range, times = 2),
-             ETR = c(sqrt(dbeta(X_range, 4.5, 3.5)) * 1.1, sqrt(dbeta(X_range, 3, 5))),
+             ETR = c(sqrt(dbeta(X_range, 4, 2.7)), sqrt(dbeta(X_range, 2.7, 4))),
              Trtm = rep(c("PSII-leaves", "PSI-leaves"), each = X_div))
 
 InteractionLabel <-
@@ -22,7 +22,7 @@ InteractionPoint <-
 InteractionText <-
   InteractionDat %>%
   filter(X %in% x_breaks) %>%
-  mutate(labels = c("far-red LED light", "Sunlight", "blue + red LED light", rep("", length(x_breaks)))) %>%
+  mutate(labels = c("far-red LED light", "Sunlight", "blue+red LED light", rep("", length(x_breaks)))) %>%
   mutate(ETR = c(0.1, 0.1, 0.1, numeric(length(x_breaks))))
 
 InteractionView <-

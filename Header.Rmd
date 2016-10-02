@@ -60,13 +60,11 @@ Running title: the spectral distribution for evaluating leaf photosynthesis
 
 **Abstract**  
   Relative spectral distributions of light during growth and for measurements do not only directly affect the net photosynthetic rate (*P*~n~), but also indirectly affect it through the interaction between the distributions of the lights.
-  This paper summarizes a plausible mechanism of the interaction, some situations in which the interaction should be considered, and recommendations for selecting appropriate measuring light to evaluate photosynthesis.
-  In agricultural and horticultural studies, the *P*~n~ should be measured under *in situ* conditions, depending on the purpose of the study.
-  For prospective studies focusing on the evaluation of plant growth after measurements, *P*~n~ should be measured under the spectral distribution of light to which the plant will be subjected.
-  In retrospective studies aiming to elucidate the causes of differences in growth brought about by the different growth conditions, measurements should be made under the spectral distributions of the lights under which the plants were grown.
-  The *P*~n~ under a single spectral distribution of measuring light is only one aspect of the photosynthetic characteristics of a leaf.
-  The obtained results must be discussed in relation to the spectral distribution of measuring light so as not to make biased evaluations.
-
+  This paper summarizes a plausible mechanism of the statistical interaction, some situations in which the interaction should be considered, and recommendations for selecting appropriate measuring light to evaluate photosynthesis.
+  A leaf grows to adjust excitation energy distribution balance between the photosystems in response to the relative spectral distribution of growth light. This adjustment modifies the response of Pn to the relative spectral distribution of measuring light.
+  Therefore, evaluating *P*~n~ of leaves of plants grown under different relative spectral distributions of growth light with single spectral distribution of measuring light leads to over/underestimation of the *P*~n~.
+  The *P*~n~ under a single spectral distribution of measuring light is only one aspect of the photosynthetic characteristics of a leaf. The obtained results must be discussed in relation to the spectral distribution of measuring light so as not to make biased evaluations.
+  In agricultural and horticultural studies, the *P*~n~ should be evaluated under appropriate measuring light, depending on the purpose of the study.
 
 **Abbreviations**  
 BR-light: blue and red LED light,
