@@ -25,3 +25,8 @@ Pn_0 %>%
   filter(., ML != "BR_LED") %>%
   {t.test(.[1:3, 3], .[4:6, 3])} %>%
   print
+
+Pn_0 %>%
+  group_by(GL, ML) %>%
+  summarise(mean = round(mean(ave), 1), se = round(se(ave), 1)) %>%
+  arrange(ML)
