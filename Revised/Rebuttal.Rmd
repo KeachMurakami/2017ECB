@@ -42,7 +42,7 @@ Reviewer: 1
 
 #### 小さな変更
 
-  投稿時にはIn pressだった論文が出版され、掲載巻号・ページが確定したため、修正しました (line 299)。
+  投稿時にはIn pressだった論文が出版され、掲載巻号・ページが確定したため、修正しました (line 300)。
 
 #### 査読者#1への返答
 
@@ -55,14 +55,14 @@ Comments to the Author
 
 > 以前の実験では、試験区間差は赤青LED光下で36%、疑似太陽光下で-3%でした。
 > 光合成評価時に無視できない効果の大きさだと考えます。
-> 各試験区の実測値・試験区間差に関する記述を追加しました (line 51--56)。
+> 各試験区の実測値・試験区間差に関する記述を追加しました (line 52--57)。
 
 ２．上記キュウリ苗の実験において、栽培光中の可視光に対してFRは何割ほど入っているのか、また、そのFR割合はPS II/PS Iの量比を変化させているとなぜ判断できるのか、その根拠となる論文を引用する必要あり。本来ならば、著者らのグループもPSII/PSI比を化学的に示す必要がある。
 
-> FRの割合に関する記述を追加しました (line 49)。
+> FRの割合に関する記述を追加しました (line 50)。
 > PSII/PSI量比が光エネルギー分配の調節に重要であると考えられますが、その他の機構が関与している可能性があります。
 > 本論文では、光エネルギー分配の調節の原因をPSII/PSI量比に限定せずに議論しております。
-> 本文を修正し、その旨を明確にしました (line 174--175)。
+> 本文を修正し、その旨を明確にしました (line 175--176)。
 
 ３．本論文がLI-6400のLED測定光源がある意味、使えない光源、と判断している、と受け取られても仕方ない面がある。ライカ社にとっては、気分のいいものではないと思われる。ライカのLED光源は、どのような測定で有効と考えられるか、そのようなケースがあるのであれば簡単でよいので記述したほうが良いと考える（もし、今のテキストに記述されていたなら、査読者の読み取り不足です）。
 
@@ -76,28 +76,28 @@ Comments to the Author
 > 筆者らも、光飽和条件下では、交互作用に起因した評価のずれの問題は生じないことを予想しておりました。
 > しかし、実際には、光飽和条件 (PPFD: 1200 µmol m^--2^ s^--1^・葉内CO~2~濃度: 20 Pa) 下においても交互作用が検出されました。
 > その原因は明確ではありませんが、いずれかの光化学系を過剰に励起させるような光を高PPFDで照射したことで、光阻害が生じたのではないか、と考えております。
-> 以上の記述を追加しました (line 160--169)。
+> 以上の記述を追加しました (line 161--170)。
 
 細かな指摘  
 １．Abstractをもっと具体的に記述したほうがよい。今回、本文を読む前に読ませていただいたが、抽象的な表現が多いため、最初はアブストラクトだけでは内容がわからなかった。本文を読んだ後では理解できたが。PSIIやPSIの吸収しやすい光で育てられた場合、PSII/PSI比が変わる可能性があるので、測定光がPSIIに偏向した光、PSIに偏向した光、で測定すると、波長に依存して過小評価あるいは過大評価がおきる、などの本文を反映した具体的な記述を入れるべきである。
 
-> ご指摘に従い、具体的な記述が多くなるよう修正しました (line 9--21)。
+> ご指摘に従い、具体的な記述が多くなるよう修正しました (line 9--22)。
 
 ２．P4L79この記述には引用が必要
 
-> 引用文献を追加し、記述を修正しました (line 83--84, 261-262)。
+> 引用文献を追加し、記述を修正しました (line 84--85, 262-263)。
 
 ３．P5L102,104など
 Fig.2中の各パネルとそのキャプションのアルファベットはa～ｄの小文字であるが、本文はA～Ｄの大文字である。統一すべき。
 
-> 修正しました (line 108, 110, 127)。
+> 修正しました (line 109, 111, 128)。
 
 ４．Fig. 2について
 Fig2dに関する記述がないように見受けられた。掲載された図の説明は全て行うべきであるため、加筆すべき（もしあったなら査読者の間違いであり、お詫びする）。  
 分配されるエネルギの大小を黒線の太さで示していると思うのだが、bとcの図について、途中から細い矢印が始まる箇所はここで合っていますか？分配されるまでは太い線、利用できるのは細い線ならば、逆三角形の桶にはいるまでは太い線のまま？桶を通過後細い線になるのでは？とも思った。この図に関しては、テキストかキャプションでさらなる解説が必要と感ずる。例えば、桶の大きさが何を反映しているか、などの記述。
 
-> Fig2b,dを比較した記述を追加しました (line 128--129)。
-> Fig2の矢印を修正し、キャプションに記述を追加しました (line 337--338)。
+> Fig2b,dを比較した記述を追加しました (line 129--130)。
+> Fig2の矢印を修正し、キャプションに記述を追加しました (line 338--339)。
 
 #### Response to Reviewer #2:
 
@@ -117,33 +117,33 @@ Specific comments
 What does this phase mean? “interaction” is a process by which two or more things affect each other. Does one light distribution affect another light distribution?
 
 > We used the term “interaction” as a statistical term throughout the manuscript.
-> We rephrased some “interaction” to “statistical interaction” (line 11, 61, 234).
+> We rephrased some “interaction” to “statistical interaction” (line 11, 62, 235).
 
 ###### 2. Explain equations (Line 87-88) in more detail. Does upper “ETR” differ from lower “ETR”
 ETR is first used in Line 86 not in 98.
 
 > The two ETRs are the same.
-> We corrected the equation (line 92) and the abbreviated point (line 90, 104).
+> We corrected the equation (line 92) and the abbreviated point (line 91, 105).
 
 
 ###### 3. Please clarify the definition of PSI-light and PSII-light?
 Is there neutral light?
 
-> We added description on the definition (line 101--103).
-> “Neutral light” exists depending on the leaf as mentioned in the manuscript (line 144--149).
+> We added description on the definition (line 102--104).
+> “Neutral light” exists depending on the leaf as mentioned in the manuscript (line 145--150).
 
 
 ###### 4. Figure 1 is very informative. Please clarify how to calculate it in detail.
 Is “typical” correct?  Is “example” better?
 
-> We added some description (line 329-330), although readers must read the cited paper for complete understanding.
+> We added some description (line 330--331), although readers must read the cited paper for complete understanding.
 > As similar spectrum was drawn in several earlier papers (e.g. Evans 1986, Hogewoning et al. 2012, Wientjes et al. 2013, Laisk et al. 2014), the shown spectrum may be “typical”.
 
 
 ###### 5. What is “potential ETR at PSI or PSII” in Line 100?
 
 > The potential ETR is a product of the distributed excitation energy to and the maximum photochemical yield of PSII (or PSI).
-> The following sentence was rephrased so that the meaning of “potential” becomes clear (line 107--108).
+> The following sentence was rephrased so that the meaning of “potential” becomes clear (line 108--109).
 
 
 ###### 6. Is Figure 3 based on the quantitative data? Does the shape or height of the peaks in curves have meanings?  I think this figure is not necessary.
@@ -156,7 +156,7 @@ Is “typical” correct?  Is “example” better?
 ###### 7. What is “relative spectral distribution”? What is the difference from “spectral distribution”? Why did you use not “relative spectral distribution” but “spectral distribution” in Fig.4?
 
 > Relative spectral distribution is normalized spectral distributions usually by the peak value.
-> We added description on the “relative spectral distribution” (line 35-36).
+> We added description on the “relative spectral distribution” (line 36--37).
 > Fig.4 shows the “spectral distributions” because they are more informative than the “relative spectral distributions”.
 
 
